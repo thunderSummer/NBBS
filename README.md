@@ -22,7 +22,7 @@
 {
     "meta": {
         "success": false,
-        "message": "具体的错误信息，例如用户名不存在，用户名账号密码错误"
+        "message": "具体的错误信息，例如用户名不存在，用户名账号密码错误，或者异常名字"
     },
     "data": null
 }
@@ -60,9 +60,9 @@ success 为布尔值，true代表本次请求成功，message一定为OK，data�
 
 success 为布尔值，true代表本次请求成功，message一定为OK，data代表返回的数据，当返回的数据为一个对象时，所返回的格式，类似于代码段3
 
-success success 为布尔值，false代表本次请求失败，message为具体的错误信息或者错误异常，data 为null，
+success success 为布尔值，false代表本次请求失败，message为具体的错误信息或者错误异常，data 为null,类似于代码段2
 
-success 为布尔值，true代表本次请求成功，message一定为OK，data为null ，代表无数据返回，但是成功，代码段4
+success 为布尔值，true代表本次请求成功，message一定为OK，data为null ，代表无数据返回，但是成功，类似于代码段4
 
 注意，上述四种情况，均是在服务端可控制的情况下返回的，因此不存在500错误，对应的ajax均为成功后执行的回调函数，
 
@@ -200,7 +200,7 @@ url: /user/register post请求
         }]
 }
 ```
-* 获取其他用户的详细信息 url: /usr/${pickName} get请求，返回格式
+* 获取其他用户的详细信息 url: /user/${pickName} get请求，返回格式
 ```json
 {
     "email":"String",
