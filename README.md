@@ -1,5 +1,6 @@
 # NBBS
 ##NBBS 前后端规范(仅限 ajax请求，页面之间的url跳转，以后再说)
+
 ###1、概述
 
 ####1、采用前后端分离的模式进行开发，前端以html Css JavaScript 为主， 后端以Java为开发语言，使用开源框架spring+springmvc+mybatis，前后端通过json数据格式进行沟通
