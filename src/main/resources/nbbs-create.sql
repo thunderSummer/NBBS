@@ -34,8 +34,8 @@ create table section(
   partition_id int not null comment '分区id',
   primary key (id)
 ) character set =utf8;
-DROP TABLE IF EXISTS nbbs_partition;
-create table nbbs_partition(
+DROP TABLE IF EXISTS bbs_partition;
+create table bbs_partition(
   id int auto_increment comment '分区id',
   title varchar(10) unique not null  comment '分区标题' ,
   primary key (id)
@@ -71,7 +71,8 @@ create table user_word(
 DROP TABLE IF EXISTS user_collection;
 create table user_collection(
   user_id int not null comment '用户',
-  post_id int not null comment '收藏的帖子id'
+  post_id int not null comment '收藏的帖子id',
+  primary key (user_id,post_id)
 )character set = utf8;
 DROP TABLE IF EXISTS user_report;
 create table user_report(
