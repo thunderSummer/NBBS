@@ -79,7 +79,7 @@ success 为布尔值，true代表本次请求成功，message一定为OK，data�
       {
               "listName": "name",
               "listIndex": 2
-            }
+      }
       ]
     }
 ```
@@ -210,5 +210,6 @@ url: /user/register post请求
     "signature": "String"
 }
 ```
+
 
 

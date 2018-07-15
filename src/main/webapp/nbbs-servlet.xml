@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:cache="http://www.springframework.org/schema/cache" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    <context:component-scan base-package="com.jvmup.nbbs.controller ,com.jvmup.nbbs.aspect" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+        <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController"/>
+        <context:include-filter type="annotation" expression="org.aspectj.lang.annotation.Aspect"/>
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    <!--开启controller的缓存-->
+    <cache:annotation-driven/>
+    <!-- 会自动注册RequestMappingHandlerMapping与RequestMappingHandlerAdapter两个Bean，
+    这是SpringMVC为@Controllers分发请求所必需的，并提供了数据绑定支持、@NumberFormatannotation支持、 @DateTimeFormat支持、@Valid支持、读写XML的支持和读写JSON的支持等功能。 -->
+    <mvc:annotation-driven/>
+    <mvc:interceptors>
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/**/static/editor/lib/**"/>-->
+            <!--<bean class="com.jvmup.nbbs.interceptor.HandlerEditorMdInterceptor"/>-->
+        <!--</mvc:interceptor>-->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.jvmup.nbbs.interceptor.UserVerifyInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+    <bean class="com.jvmup.nbbs.aspect.PermissionAspect"/>
+    <aop:aspectj-autoproxy/>
+    <bean
+            class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
+            p:messageConverters-ref="messageConverters">
+    </bean>
+    <!--<mvc:resources mapping="/*/static/editor/lib/codemirror/addon/dialog/**" location="static/editor/lib/codemirror/addon/dialog/"/>-->
+    <!--<mvc:resources mapping="/*/static/editor/lib/codemirror/**" location="static/editor/lib/codemirror/"/>-->
+    <!--<mvc:resources mapping="/*/static/editor/lib/codemirror/addon/search/**" location="static/editor/lib/codemirror/addon/search/"/>-->
+    <!--<mvc:resources mapping="/*/static/editor/lib/codemirror/addon/fold/**" location="static/editor/lib/codemirror/addon/fold/"/>-->
+    <!--<mvc:resources mapping="/static/**" location="static/"/>-->
+    <util:list id="messageConverters">
+        <bean
+                class="org.springframework.http.converter.BufferedImageHttpMessageConverter"/>
+        <bean
+                class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>
+        <bean   class="org.springframework.http.converter.StringHttpMessageConverter" />
+
+        <bean
+                class="org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter"/>
+        <bean
+                class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+    </util:list>
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/html/" p:suffix=".html"/>
+
+</beans>
