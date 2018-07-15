@@ -77,21 +77,25 @@ DROP TABLE IF EXISTS user_report;
 create table user_report(
   user_id int not null comment '用户id',
   post_id int not null comment '举报的id',
-  reason int not null comment '举报的理由'
+  reason int not null comment '举报的理由',
+  primary key (user_id,post_id)
 )character set = utf8;
 DROP TABLE IF EXISTS user_like;
 create table user_like(
   user_id int not null comment '用户',
-  post_id int not null comment '喜欢的帖子id'
+  post_id int not null comment '喜欢的帖子id',
+  primary key(user_id,post_id)
 )character set = utf8;
 DROP TABLE IF EXISTS user_unlike;
 create table user_unlike(
   user_id int not null comment '用户',
-  post_id int not null comment '不喜欢的帖子id'
+  post_id int not null comment '不喜欢的帖子id',
+  primary key (user_id,post_id)
 )character set = utf8;
-DROP TABLE IF EXISTS mask_word_word;
+DROP TABLE IF EXISTS mask_word;
 create table mask_word(
-  word varchar(100) comment '系统方面的屏蔽关键词,支持正则'
+  word varchar(100) comment '系统方面的屏蔽关键词,支持正则',
+  primary key (word)
 )character set = utf8;
 DROP TABLE IF EXISTS admin_partition;
 create table admin_partition(
