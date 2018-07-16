@@ -93,4 +93,7 @@
     <insert id="addUser" keyProperty="id" useGeneratedKeys="true">
         insert into user(nickname, email, password) values (#{nickname},#{email},#{password})
     </insert>
+    <insert id="sdf">
+        insert into user_black(black_id, blacked_id) values ()
+    </insert>
 </mapper>

@@ -1,6 +1,7 @@
 package com.jvmup.nbbs.service;
 
 import com.jvmup.nbbs.dao.UserDao;
+import com.jvmup.nbbs.po.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
@@ -15,9 +16,10 @@ import org.springframework.stereotype.Service;
  **/
 @Service
 public class UserService {
+
     private UserDao userDao;
 
-    @Autowired
+    @Autowired()
     public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
     }
@@ -25,6 +27,10 @@ public class UserService {
     @Cacheable(value = "nickname2id")
     public int getIdByNickname(String nickname){
         return userDao.getIdByNickname(nickname);
+    }
+
+    public User getUserInfo(int userId){
+        return userDao.getUserInfo(userId);
     }
 
 }

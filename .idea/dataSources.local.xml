@@ -23,5 +23,10 @@
       <first-sync>true</first-sync>
       <user-name>root</user-name>
     </data-source>
+    <data-source name="@localhost" uuid="e60160ad-aa7d-490b-9e12-63b575a3a5a0">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+    </data-source>
   </component>
 </project>
