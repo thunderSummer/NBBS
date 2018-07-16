@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS user;
 create table user(
   id int auto_increment  comment '用户id，主键自增长',
-  nickname varchar(50) not null  unique comment '用户昵称,唯一标示，但可以修改',
+  pickname varchar(50) not null  unique comment '用户昵称,唯一标示，但可以修改',
   email varchar(50) not null unique comment '用户邮箱',
   password varchar(50) not null  comment '用户密码',
   signature varchar(100) default '这个用户很懒，什么也没有留下',

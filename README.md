@@ -99,16 +99,16 @@ url: /user/register post请求
 * 登录时，需求用户邮箱，用户密码，验证码(本地，通过验证才可以提交) url: /user/login post请求
 ```json
     {
-      "user":{
-      "email":"String"
-      },
+      "email":"String",
       "password": "String"
     }
 ```
 * 注册1 或者登录2 或者找回密码3，更新邮箱4 需要通知服务器端发送验证码 url : /user/verification post请求
 ```json
     {
-      "email":"String",
+      "user":{
+      "email":"String"
+      },
       "type": "int"
     }
 ```
@@ -127,35 +127,25 @@ url: /user/register post请求
 ```json
   {
     "email":"String",
-    "userImg":"String(照片所在的url)",
+    "avatar":"String(照片所在的url)",
     "nickname":"String",
-    "sex":"String",
+    "sex":"String(男女)",
     "signature": "String",
-    "fans":[{
-        "nickname":"String",
-        "userImg":"String",
-        "sex":"String"
-    }],
-    "attention":[{
-      "nickname":"String",
-      "userImg":"String",
-      "sex":"String"
-    }],
-    "blacklist":[{
-            "nickname":"String",
-            "userImg":"String",
-            "sex":"String"
-    }]
+    "ex":"int(用户经验)",
+    "createTime": "String",
+    "phone":"String",
+    "status":"int(用户当前的状态，1代表正常，2代表被封禁)"
   }
 ```
-* 上传照片(具体的大小在说) url :/user/uploadImg post 请求 (这个应该使用form表单，所以，就不用json格式，加一个隐藏的input，把用户名 nickname 一同上传)
+* 上传照片(具体的大小在说) url :/upload/avatar post 请求 (这个应该使用form表单，所以，就不用json格式，加一个隐藏的input，把用户名 nickname 一同上传)
 
 * 更新非重要个人信息(除密码，邮箱) url:/user/info put请求 (这个和上传照片我也不是很清楚应该怎么弄，涉及到form)
 ```json
   {
      "nickname":"String",
      "sex":"String",
-     "signature": "String"
+     "signature": "String",
+     "phone":"String"
   }
 ``` 
 * 更新邮箱 url : /user/email put请求(必须 先发送验证码)
@@ -195,19 +185,21 @@ url: /user/register post请求
         },
         "data": [{
               "nickname":"String",
-              "userImg":"String",
-              "sex":"String"
+              "avatar":"String",
+              "sex":"String",
+              "createTime":"String"
         }]
 }
 ```
-* 获取其他用户的详细信息 url: /user/${pickName} get请求，返回格式
+* 获取其他用户的详细信息 url: /user/${nickName} get请求，返回格式
 ```json
 {
     "email":"String",
-    "userImg":"String(照片所在的url)",
+    "avatar":"String(照片所在的url)",
     "nickname":"String",
     "sex":"String",
-    "signature": "String"
+    "signature": "String",
+    "ex":"int"
 }
 ```
 

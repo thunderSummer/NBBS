@@ -11,5 +11,17 @@
       <user-name>root</user-name>
       <introspection-schemas>*:nbbs</introspection-schemas>
     </data-source>
+    <data-source name="nbbs@167.99.109.33" uuid="cf53dce8-9312-4918-a9f9-539eef3d569d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>root</user-name>
+    </data-source>
+    <data-source name="jdbc:mysql://139.199.156.50 :3306/mysql" uuid="679b7148-1672-4e1b-a39d-f7631a8172a3">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>root</user-name>
+    </data-source>
   </component>
 </project>

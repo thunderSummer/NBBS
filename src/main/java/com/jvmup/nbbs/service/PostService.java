@@ -1,5 +1,7 @@
 package com.jvmup.nbbs.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * ProjectName: NBBS
  *
@@ -7,5 +9,6 @@ package com.jvmup.nbbs.service;
  * <p>
  * Created by xxl on - 2018-07-16 11:43
  **/
+@Service
 public class PostService {
 }

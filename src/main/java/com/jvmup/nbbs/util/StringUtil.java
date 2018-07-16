@@ -9,4 +9,7 @@ package com.jvmup.nbbs.util;
  **/
 public class StringUtil {
     public static String loginStatus = "loginStatus";
+    public static boolean isBlank(String s){
+        return s==null||s.equals("");
+    }
 }

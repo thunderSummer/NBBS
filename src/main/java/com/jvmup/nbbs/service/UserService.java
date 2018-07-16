@@ -4,6 +4,7 @@ import com.jvmup.nbbs.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
 
 /**
  * ProjectName: NBBS
@@ -12,6 +13,7 @@ import org.springframework.cache.annotation.Cacheable;
  * <p>
  * Created by xxl on - 2018-07-14 17:44
  **/
+@Service
 public class UserService {
     private UserDao userDao;
 

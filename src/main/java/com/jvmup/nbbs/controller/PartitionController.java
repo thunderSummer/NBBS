@@ -1,5 +1,7 @@
 package com.jvmup.nbbs.controller;
 
+import org.springframework.web.bind.annotation.RestController;
+
 /**
  * ProjectName: NBBS
  *
@@ -7,5 +9,6 @@ package com.jvmup.nbbs.controller;
  * <p>
  * Created by xxl on - 2018-07-16 11:32
  **/
+@RestController
 public class PartitionController {
 }
