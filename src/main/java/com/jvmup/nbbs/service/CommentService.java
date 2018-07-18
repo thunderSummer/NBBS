@@ -23,24 +23,24 @@ public class CommentService {
     public void setCommentDao(CommentDao commentDao){
         this.commentDao=commentDao;
     }
-    /**
-     * @author lhm
-     * <p>
-     *     通过id获取评论相关的非用户信息
-     * </p>
-     */
-    public Comment getCommentInfoExceptUserById(int id){
-        return commentDao.getCommentInfoExceptUserById(id);
-    }
-    /**
-     * @author lhm
-     * <p>
-     *     通过评论id获取用户信息
-     * </p>
-     */
-    public User getUserIfoById(int id){
-        return commentDao.getUserIfoById(id);
-    }
+//    /**
+//     * @author lhm
+//     * <p>
+//     *     通过id获取评论相关的非用户信息
+//     * </p>
+//     */
+//    public Comment getCommentInfoExceptUserById(int id){
+//        return commentDao.getCommentInfoExceptUserById(id);
+//    }
+//    /**
+//     * @author lhm
+//     * <p>
+//     *     通过评论id获取用户信息
+//     * </p>
+//     */
+//    public User getUserInfoById(int id){
+//        return commentDao.getUserInfoById(id);
+//    }
     /**
      * @author lhm
      * <p>
@@ -56,8 +56,8 @@ public class CommentService {
      *     通过post id获取该post下所有评论
      * </p>
      */
-    public List<Comment> getAllCommentByPostId(int post_id){
-        return commentDao.getAllCommentByPostId(post_id);
+    public List<Comment> getAllCommentByPostId(int postId){
+        return commentDao.getAllCommentByPostId(postId);
     }
     /**
      * @author lhm
@@ -67,6 +67,11 @@ public class CommentService {
      */
     public void addComment(Comment comment){
         commentDao.addComment(comment);
+        commentDao.updateLastModify(comment.getPost().getId());
+    }
+
+    public List<Comment> getCommentById(int userId){
+        return commentDao.getAllCommentByUserId(userId);
     }
 
 }

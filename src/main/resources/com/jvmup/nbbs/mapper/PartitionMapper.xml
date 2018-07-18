@@ -3,34 +3,64 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jvmup.nbbs.dao.PartitionDao">
-
-    <select id="getAllPartition" resultType="partition">
-        select * from nbbs.bbs_partition
+    <resultMap id="partitionResult" type="partition">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <collection property="sections" ofType="section">
+            <id property="id" column="section_id"/>
+            <result property="title" column="section_title"/>
+            <collection property="sectionOwner" ofType="user">
+                <result column="section_user_nickname" property="nickname"/>
+            </collection>
+        </collection>
+        <collection property="partitionOwner" ofType="user" javaType="ArrayList">
+            <result column="partition_nickname" property="nickname"/>
+        </collection>
+    </resultMap>
+    <resultMap id="sectionResult" type="section">
+        <id property="id" column="section_id"/>
+        <id property="title" column="section_title"/>
+    </resultMap>
+    <select id="getAllPartition" resultMap="partitionResult">
+        select p.id,p.title,
+        section.title as section_title,
+        section.id as section_id,
+        u2.nickname as section_user_nickname,
+        u1.nickname as partition_nickname
+        from bbs_partition p
+        left join admin_partition ap on ap.partition_id=p.id
+        left join section on section.partition_id= p.id
+        left join admin_section on admin_section.section_id = section.id
+        left join user u1 on u1.id=ap.user_id
+        left join user u2 on u2.id = admin_section.user_id
     </select>
-    <select id="getPartitionInfo" resultType="partition">
-        select *from nbbs.bbs_partition where id=#{parid}
+   <insert id="addPartition">
+       insert into bbs_partition (title) values (#{title});
+   </insert>
+    <select id="getAllBriefPartition" resultType="partition">
+        select * from bbs_partition
     </select>
-    <update id="UpdatePartiTitle">
-        update title
-        <set>
-            <if test="title!=null">title=#{title}</if>
-        </set>
-        where id=#{id}
-    </update>
-    <delete id="removePartiTitle">
-        delete from title where id=#{id}
-    </delete>
+    <select id="getPartitionInfo" resultMap="partitionResult">
+        select p.id,p.title,
+        section.title as section_title,
+        section.id as section_id,
+        u2.nickname as section_user_nickname,
+        u1.nickname as partition_nickname
+        from bbs_partition p
+        left join admin_partition ap on ap.partition_id=p.id
+        left join section on section.partition_id= p.id
+        left join admin_section on admin_section.section_id = section.id
+        left join user u1 on u1.id=ap.user_id
+        left join user u2 on u2.id = admin_section.user_id
+        where p.id = #{id}
+    </select>
     <update id="updatePartition">
-        update Partition
-        <set>
-            <if test="title!=null">title=#{title}</if>
-        </set>
-        where id=#{id};
+        update bbs_partition set title = #{title} where id=#{id}
     </update>
-    <delete id="removePartition">
-        delete from nbbs.bbs_partition where id=#{parid}
-    </delete>
-    <insert id="addPartition">
-        insert into nbbs.bbs_partition(id,title) values(id,title)
-    </insert>
+    <!--<delete id="deletePartition">-->
+        <!--delete from bbs_partition where id=#{id}-->
+        <!--delete from admin_partition where partition_id=#{id}-->
+        <!--delete from admin_section where section_id in (select id from section where partition_id=#{id})-->
+        <!--delete from user_collection where post_id in(select id from post where section_id in ())-->
+    <!--</delete>-->
 </mapper>

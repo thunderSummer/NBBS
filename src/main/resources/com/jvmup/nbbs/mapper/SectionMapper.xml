@@ -3,58 +3,58 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jvmup.nbbs.dao.SectionDao">
+    <resultMap id="sectionResult" type="section">
+        <id property="id" column="id"/>
+        <result column="title" property="title"/>
+        <result column="announcement" property="announcement"/>
+        <association property="partition" javaType="partition">
+            <id property="id" column="partition_id"/>
+            <result property="title" column="partition_title"/>
+        </association>
+        <collection property="sectionOwner" ofType="user">
+            <result column="user_nickname" property="nickname"/>
+            <result column="user_sex" property="sex" typeHandler="com.jvmup.nbbs.util.SexTypeHandler"/>
+            <result column="user_avatar" property="avatar"/>
+            <result column="user_createTime" property="createTime"/>
+        </collection>
+    </resultMap>
     <update id="updateSection">
-        update nbbs.section
+        update section
         <set>
-           <if test="title!=null">title=#{title}</if>
-            <if test="announcenment!=null">announcement=#{announcement}</if>
-            <if test="partition_id!=null">partition_id=#{partition_id}</if>
+            <if test="title!=null and title !=''">
+                title = #{title},
+            </if>
+            <if test="announcement!=null and announcement!=''">
+                announcement = #{announcement},
+            </if>
+
         </set>
         where id=#{id}
     </update>
-    <update id="updateTitle">
-        update nbbs.section
-        <set>
-            <if test="title!=null">title=#{title}</if>
-        </set>
-        where id=#{id}
-    </update>
-    <select id="getTitle" resultType="title">
-        select title from nbbs.section where id=#{id}
+    <select id="getSectionById" resultMap="sectionResult">
+        select section.id,section.partition_id,section.title,section.announcement,
+        bbs_partition.title as partition_title,user.nickname as user_nickname,user.sex as user_sex,user.avatar as user_avatar,user.create_time as createTime
+         from section left join bbs_partition on section.partition_id=bbs_partition.id left join admin_section on admin_section.section_id=section.id left join user on user.id = admin_section.user_id
+         where section.id=#{id};
     </select>
-    <update id="updateAnnouncement">
-        update nbbs.section
-        <set>
-            <if test="announcement!=null">announcement=#{announcement}</if>
-        </set>
-        where id=#{id}
-    </update>
-    <select id="getAnnouncement" resultType="getAnnouncement">
-        select announcement from nbbs.section where id=#{id}
-    </select>
-    <update id="updatePartitionid">
-        update nbbs.section
-        <set>
-            <if test="partition!=null">partition=#{partition}</if>
-        </set>
-        where id=#{id}
-    </update>
-    <select id="getPartitionid" resultType="partition_id">
-        select id from section where id=#{id}
-    </select>
-    <insert id="addSection">
-        insert into section(title,announcement,partition_id)values (#{title},#{announcement},#{partition_id})
+    <insert id="addSection" useGeneratedKeys="true" keyProperty="id">
+        insert into section (title, announcement, partition_id) values (#{title},#{announcement},#{partition.id});
     </insert>
-    <delete id="removeAnnouncement">
-        delete from announcement where id=#{id}
-    </delete>
-    <delete id="removeSection">
-        delete from section where id=#{id}
-    </delete>
-    <select id="getSectionInfo" resultType="section">
-        select * from section where id=#{id}
+    <update id="changeSectionPartition">
+        update section set partition_id = #{partitionId} where id=#{id}  ;
+    </update>
+    <select id="getNestingSection" resultMap="sectionResult">
+         select section.id,section.partition_id,section.title,section.announcement,
+        bbs_partition.title as partition_title,user.nickname as user_nickname,user.sex as user_sex,user.avatar as user_avatar,user.create_time as createTime
+         from section left join bbs_partition on section.partition_id=bbs_partition.id left join admin_section on admin_section.section_id=section.id left join user on user.id = admin_section.user_id
     </select>
     <select id="getAllSection" resultType="section">
-        select section from nbbs
+        select * from section;
+    </select>
+    <select id="getSectionByPartitionId" resultMap="sectionResult">
+        select section.id,section.partition_id,section.title,section.announcement,
+        bbs_partition.title as partition_title,user.nickname as user_nickname,user.sex as user_sex,user.avatar as user_avatar,user.create_time as createTime
+         from section left join bbs_partition on section.partition_id=bbs_partition.id left join admin_section on admin_section.section_id=section.id left join user on user.id = admin_section.user_id
+         where partition_id=#{partitionId};
     </select>
 </mapper>

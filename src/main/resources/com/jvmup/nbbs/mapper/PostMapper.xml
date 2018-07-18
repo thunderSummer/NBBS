@@ -4,28 +4,117 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jvmup.nbbs.dao.PostDao">
     <resultMap id="postResult" type="post" autoMapping="true">
+        <id column="id" property="id"/>
+        <result column="create_time" property="createTime"/>
+        <result column="brief" property="brief"/>
+        <result column="title" property="title"/>
+        <result column="view" property="view"/>
+        <result column="comment_num" property="commentNum"/>
+        <association property="section" javaType="section">
+            <id column="section_id" property="id"/>
+            <result column="section_title" property="title"/>
+        </association>
         <association property="user" resultMap="userResult"/>
-        <collection property="commentList" javaType="comment">
-            <id column="comment_id" property="id"/>
-            <result column="comment_time" property="time"/>
-            <result column="comment_content" property="content"/>
-            <association property="user" resultMap="userResult" columnPrefix="comment_user"/>
-            <association property="comment" javaType="comment">
-                <result column="comment_comment_content" property="content"/>
-                <association property="user" javaType="user">
-                    <result property="nickname" column="comment_comment_user_nickname"/>
-                </association>
-            </association>
-
+        <collection property="likeList" ofType="user" >
+            <result property="nickname" column="like_nickname"/>
+        </collection>
+        <collection property="collectionList" ofType="user">
+            <result property="nickname" column="collection_nickname"/>
         </collection>
     </resultMap>
     <resultMap id="userResult" type="user">
         <result property="nickname" column="nickname"/>
         <result property="ex" column="ex"/>
-        <result property="createTime" column="create_time"/>
+        <result property="createTime" column="user_create_time"/>
         <result property="avatar" column="avatar"/>
     </resultMap>
-    <select id="getPost">
-        select p.id,p.create_time,p.content,p.title,p.view,p.last_modify,p. from post p left join user post_user on p.user_id=post_user.id
+    <!--高子彭 18717 1135-->
+    <select id="getPost" resultMap="postResult">
+        select p.id,p.create_time,p.brief,p.title,p.view,p.comment_num,
+        section.id as section_id ,section.title as section_title,
+        user.nickname,user.ex ,user.create_time as user_create_time ,user.avatar,
+        u1.nickname as collection_nickname,u2.nickname as like_nickname
+        from post p
+        left join section on section.id=p.section_id
+        left join user on user.id = user_id
+        left join user_collection on p.id = user_collection.post_id
+        left join user u1 on user_collection.user_id=u1.id
+        left join user_like on user_like.post_id=p.id
+        left join user u2 on u2.id = user_like.user_id
+        where p.section_id=#{sectionId} <if test="type==0">
+        order by p.create_time
+        </if>
+        <if test="type==2">
+            order by p.last_modify
+        </if>
+        <if test="type==3">
+            order by  p.view +p.comment_num*3
+        </if>
     </select>
+    <select id="getHotPost" resultMap="postResult">
+        select p.id,p.create_time,p.brief,p.title,p.view,p.comment_num,
+        section.id as section_id ,section.title as section_title,
+        u1.nickname as collection_nickname,u2.nickname as like_nickname
+        from post p
+        left join section on section.id=p.section_id
+        left join user_collection on p.id = user_collection.post_id
+        left join user u1 on user_collection.user_id=u1.id
+        left join user_like on user_like.post_id=p.id
+        left join user u2 on u2.id = user_like.user_id
+        order by p.comment_num*3+p.view limit 5;
+    </select>
+    <select id="getPostByPostId" resultMap="postResult">
+        select p.id,p.create_time,p.brief,p.title,p.view,p.comment_num,
+        section.id as section_id ,section.title as section_title,
+        user.nickname,user.ex ,user.create_time as user_create_time,user.avatar,
+        u1.nickname as collection_nickname,u2.nickname as like_nickname
+        from post p
+        left join section on section.id=p.section_id
+        left join user on user.id = user_id
+        left join user_collection on p.id = user_collection.post_id
+        left join user u1 on user_collection.user_id=u1.id
+        left join user_like on user_like.post_id=p.id
+        left join user u2 on u2.id = user_like.user_id
+        where p.id=#{id}
+    </select>
+    <delete id="deletePost">
+        delete from post where post.id=#{id}
+    </delete>
+    <insert id="addPost">
+        insert into post (title,content,user_id,topping,create_time,section_id) value (#{title},#{content},#{user.id},#{type},#{topping},#{create_time},#{section.id})
+    </insert>
+    <update id="toppingPost">
+        update  post set topping=1 where id=#{id}
+    </update>
+    <update id="changeType">
+        update  post set section_id=#{sectionId} where post.id=#{postId}
+    </update>
+    <insert id="praise">
+        insert into user_like(user_id, post_id) value (#{userId},#{postId})
+    </insert>
+    <select id="getPostByAuthId">
+        select id,title,brief,post.create_time,user.nickname,view,praise,type,comment_num from post left join  user on user.id=post.user_id where user_id=#{id}
+    </select>
+    <select id="getCollectionCnt">
+        select count (user_id) from user_collection group by post_id having post_id=#{postId}
+    </select>
+    <insert id="collect">
+        insert into user_collection (user_id, post_id) value (#{userId},#{postId})
+    </insert>
+    <select id="getPraiseCnt">
+        select count(user_id) from user_like group by post_id having post_id=#{id};
+    </select>
+    <insert id="Report">
+        insert into user_report (user_id, post_id, reason) values (#{userId},#{postId},#{reason});
+    </insert>
+    <select id="getTopPostBySection">
+        select top 5 p.id,p.create_time,p.brief,p.title,p.view from post p  where p.section_id=#{sectionId} order by p.create_time desc ;
+    </select>
+    <select id="getBrief">
+        select brief from post where post.id=id;
+    </select>
+    <select id="incview">
+      update post set view =view+1  whereid =#{id} ;
+    </select>
+
 </mapper>

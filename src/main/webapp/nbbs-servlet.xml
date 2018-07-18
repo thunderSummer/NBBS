@@ -13,7 +13,7 @@
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
     <!--开启controller的缓存-->
-    <cache:annotation-driven/>
+    <!--<cache:annotation-driven/>-->
     <!-- 会自动注册RequestMappingHandlerMapping与RequestMappingHandlerAdapter两个Bean，
     这是SpringMVC为@Controllers分发请求所必需的，并提供了数据绑定支持、@NumberFormatannotation支持、 @DateTimeFormat支持、@Valid支持、读写XML的支持和读写JSON的支持等功能。 -->
     <mvc:annotation-driven/>

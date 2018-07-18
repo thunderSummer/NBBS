@@ -7,51 +7,40 @@
   </component>
   <component name="BookmarkManager">
     <bookmark url="file://$APPLICATION_CONFIG_DIR$/consoles/db/ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/console.sql" line="55" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/UserController.java" line="91" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6965bf44-e874-4bf0-914d-88fc7f5d353c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/annotation/UserConsistent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/CodeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/exception/LoginStatusInvalidException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/exception/UserConsistentFailException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/exception/UserNotExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/UserCacheService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/util/MailUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/util/TimeUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/util/UserWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/UserServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/util/MailUtilTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/CommentServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/PartitionServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/PostServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/SectionServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/annotation/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/annotation/Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/annotation/UserVerify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/annotation/NeedLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/aspect/ExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/aspect/ExceptionHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/aspect/PermissionAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/aspect/PermissionAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/StaticController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/StaticController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/CodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/CodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/PartitionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/PartitionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/CommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/CommentDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/PartitionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/PartitionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/PostDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/PostDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/SectionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/SectionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/interceptor/UserVerifyInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/interceptor/StaticHtmlCheckInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Partition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Partition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Section.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Sex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Sex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/util/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext/applicationContext-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext/applicationContext-dao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/PartitionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/PartitionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/SectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/SectionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext/applicationContext-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext/applicationContext-service.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/CommentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/PartitionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/PartitionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/PostMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/PostMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/SectionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/SectionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/nbbs-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/nbbs-servlet.xml" afterDir="false" />
     </list>
@@ -104,14 +93,14 @@
         <item name="nbbs@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="nbbs: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="user_black: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="post: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="nbbs@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="nbbs: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="user_fans: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="user: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -137,48 +126,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CommentDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/CommentDao.java">
+      <file leaf-file-name="PostDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/PostDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+            <state relative-caret-position="282">
+              <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SectionMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/SectionMapper.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="PartitionMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/PartitionMapper.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="CommentMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/CommentMapper.xml">
+      <file leaf-file-name="PostService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/PostService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+            <state relative-caret-position="320">
+              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+              <folding>
+                <element signature="e#2494#2495#0" expanded="true" />
+                <element signature="e#2540#2541#0" expanded="true" />
+                <element signature="e#3009#3010#0" expanded="true" />
+                <element signature="e#3031#3032#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/console.sql">
+      <file leaf-file-name="PostServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/PostServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1900">
-              <caret line="100" column="291" selection-start-line="100" selection-start-column="291" selection-end-line="100" selection-end-column="291" />
+            <state relative-caret-position="42">
+              <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+              <folding>
+                <element signature="e#404#405#0" expanded="true" />
+                <element signature="e#450#451#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/UserMapper.xml">
+      <file leaf-file-name="PostController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/PostController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="295">
+              <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SectionServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/SectionServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/BaseService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/CommentService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="699">
+              <caret line="76" column="1" lean-forward="true" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -186,35 +202,94 @@
       <file leaf-file-name="PostMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/PostMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            <state relative-caret-position="202">
+              <caret line="68" column="51" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Comment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Comment.java">
+      <file leaf-file-name="Post.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Post.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" selection-start-line="17" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="-57">
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
+              <folding>
+                <element signature="e#885#886#0" expanded="true" />
+                <element signature="e#923#924#0" expanded="true" />
+                <element signature="e#958#959#0" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
+                <element signature="e#903#904#0" expanded="true" />
+                <element signature="e#952#953#0" expanded="true" />
+                <element signature="e#996#997#0" expanded="true" />
+                <element signature="e#850#851#0" expanded="true" />
+                <element signature="e#884#885#0" expanded="true" />
+                <element signature="e#919#920#0" expanded="true" />
+                <element signature="e#952#953#0" expanded="true" />
+                <element signature="e#1002#1003#0" expanded="true" />
+                <element signature="e#1046#1047#0" expanded="true" />
+                <element signature="e#1078#1079#0" expanded="true" />
+                <element signature="e#1106#1107#0" expanded="true" />
+                <element signature="e#1133#1134#0" expanded="true" />
+                <element signature="e#1159#1160#0" expanded="true" />
+                <element signature="e#1194#1195#0" expanded="true" />
+                <element signature="e#1224#1225#0" expanded="true" />
+                <element signature="e#835#836#0" expanded="true" />
+                <element signature="e#860#861#0" expanded="true" />
+                <element signature="e#893#894#0" expanded="true" />
+                <element signature="e#921#922#0" expanded="true" />
+                <element signature="e#950#951#0" expanded="true" />
+                <element signature="e#977#978#0" expanded="true" />
+                <element signature="e#1015#1016#0" expanded="true" />
+                <element signature="e#1047#1048#0" expanded="true" />
+                <element signature="e#1079#1080#0" expanded="true" />
+                <element signature="e#1107#1108#0" expanded="true" />
+                <element signature="e#1149#1150#0" expanded="true" />
+                <element signature="e#1183#1184#0" expanded="true" />
+                <element signature="e#1217#1218#0" expanded="true" />
+                <element signature="e#1247#1248#0" expanded="true" />
+                <element signature="e#1293#1294#0" expanded="true" />
+                <element signature="e#1331#1332#0" expanded="true" />
+                <element signature="e#1521#1522#0" expanded="true" />
+                <element signature="e#1548#1549#0" expanded="true" />
+                <element signature="e#1585#1586#0" expanded="true" />
+                <element signature="e#1617#1618#0" expanded="true" />
+                <element signature="e#1645#1646#0" expanded="true" />
+                <element signature="e#1672#1673#0" expanded="true" />
+                <element signature="e#1709#1710#0" expanded="true" />
+                <element signature="e#1741#1742#0" expanded="true" />
+                <element signature="e#1772#1773#0" expanded="true" />
+                <element signature="e#1802#1803#0" expanded="true" />
+                <element signature="e#1845#1846#0" expanded="true" />
+                <element signature="e#1883#1884#0" expanded="true" />
+                <element signature="e#2082#2083#0" expanded="true" />
+                <element signature="e#2116#2117#0" expanded="true" />
+                <element signature="e#2177#2178#0" expanded="true" />
+                <element signature="e#2223#2224#0" expanded="true" />
+                <element signature="e#2262#2263#0" expanded="true" />
+                <element signature="e#2293#2294#0" expanded="true" />
+                <element signature="e#2345#2346#0" expanded="true" />
+                <element signature="e#2385#2386#0" expanded="true" />
+                <element signature="e#2426#2427#0" expanded="true" />
+                <element signature="e#2459#2460#0" expanded="true" />
+                <element signature="e#2515#2516#0" expanded="true" />
+                <element signature="e#2559#2560#0" expanded="true" />
+                <element signature="e#2600#2601#0" expanded="true" />
+                <element signature="e#2633#2634#0" expanded="true" />
+                <element signature="e#2689#2690#0" expanded="true" />
+                <element signature="e#2733#2734#0" expanded="true" />
+                <element signature="e#2778#2779#0" expanded="true" />
+                <element signature="e#2815#2816#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CodeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/CodeController.java">
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SectionDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/SectionDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="759">
+              <caret line="111" selection-start-line="111" selection-end-line="111" />
             </state>
           </provider>
         </entry>
@@ -232,8 +307,8 @@
         <option value="Interface" />
         <option value="Mybatis Mapper" />
         <option value="Class" />
-        <option value="TestNG Test Class" />
         <option value="HTML File" />
+        <option value="TestNG Test Class" />
       </list>
     </option>
   </component>
@@ -599,36 +674,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/BaseService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/CommentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/PartitionService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/PostService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/SectionService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/PartitionMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/nbbs-create.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/SectionMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/FileUploadController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/util/MailUtilTest.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/util/MailUtilTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/util/MailUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/util/TimeUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/CodeController.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/679b7148-1672-4e1b-a39d-f7631a8172a3/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/util/StringUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/annotation/UserConsistent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/aspect/ExceptionHandle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/exception/UserNotExsitException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/exception/UserNotExistException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/util/UserWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/exception/UserConsistentFailException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/annotation/Permission.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/aspect/UserConsistentAspect.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/exception/LoginStatusInvalidException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/aspect/PermissionAspect.java" />
         <option value="$PROJECT_DIR$/src/main/resources/temp-data.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext/applicationContext-service.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext/applicationContext-dao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/annotation/NeedLogin.java" />
@@ -637,19 +688,43 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/interceptor/UserVerifyInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/interceptor/CheckLoginInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/interceptor/StaticHtmlCheckInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/PostMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/UserCacheService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/UserServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/PartitionDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/Comment.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext/applicationContext-service.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/nbbs-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/CodeController.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/PartitionDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/PartitionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Partition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/PartitionController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/PartitionServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/PartitionMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/SectionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/SectionDao.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/SectionMapper.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/SectionServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/CommentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/CommentService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/CommentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/CommentServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Section.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Sex.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Comment.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/PostDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/PostService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/PostController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/PostServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/PostMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Post.java" />
       </list>
     </option>
   </component>
@@ -670,10 +745,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="273" />
-    <option name="y" value="125" />
-    <option name="width" value="1647" />
-    <option name="height" value="955" />
+    <option name="x" value="481" />
+    <option name="y" value="96" />
+    <option name="width" value="1637" />
+    <option name="height" value="957" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -684,7 +759,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
@@ -724,88 +798,13 @@
             </path>
             <path>
               <item name="NBBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NBBS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NBBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NBBS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="applicationContext" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NBBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NBBS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NBBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NBBS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NBBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NBBS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NBBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NBBS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NBBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NBBS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="NBBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NBBS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NBBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NBBS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NBBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NBBS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NBBS" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -831,22 +830,22 @@
       <recent name="com.jvmup.nbbs.service" />
       <recent name="com.jvmup.nbbs.util" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.jvmup.nbbs.aspect" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.jvmup.nbbs.interceptor" />
       <recent name="com.jvmup.nbbs.util" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller" />
       <recent name="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.jvmup.nbbs.aspect" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -861,7 +860,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.UserServiceTest.testAddFollow">
+  <component name="RunManager" selected="TestNG.PostServiceTest.testGetPostBySection">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -881,7 +880,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="UserServiceTest.testAddFans" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentServiceTest.testAddComment" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NBBS_test" />
       <extension name="coverage">
         <pattern>
@@ -893,8 +892,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.jvmup.nbbs.service" />
-      <option name="MAIN_CLASS_NAME" value="com.jvmup.nbbs.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testAddFans" />
+      <option name="MAIN_CLASS_NAME" value="com.jvmup.nbbs.service.CommentServiceTest" />
+      <option name="METHOD_NAME" value="testAddComment" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -910,7 +909,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="UserServiceTest.testAddFollow" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentServiceTest.testDeleteCommentById" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NBBS_test" />
       <extension name="coverage">
         <pattern>
@@ -922,8 +921,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.jvmup.nbbs.service" />
-      <option name="MAIN_CLASS_NAME" value="com.jvmup.nbbs.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testAddFollow" />
+      <option name="MAIN_CLASS_NAME" value="com.jvmup.nbbs.service.CommentServiceTest" />
+      <option name="METHOD_NAME" value="testDeleteCommentById" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -939,7 +938,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="UserServiceTest.testGetFans" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentServiceTest.testGetAllCommentByPostId" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NBBS_test" />
       <extension name="coverage">
         <pattern>
@@ -951,8 +950,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.jvmup.nbbs.service" />
-      <option name="MAIN_CLASS_NAME" value="com.jvmup.nbbs.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testGetFans" />
+      <option name="MAIN_CLASS_NAME" value="com.jvmup.nbbs.service.CommentServiceTest" />
+      <option name="METHOD_NAME" value="testGetAllCommentByPostId" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -968,7 +967,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="UserServiceTest.testGetFollow" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentServiceTest.testGetCommentById" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NBBS_test" />
       <extension name="coverage">
         <pattern>
@@ -980,8 +979,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.jvmup.nbbs.service" />
-      <option name="MAIN_CLASS_NAME" value="com.jvmup.nbbs.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testGetFollow" />
+      <option name="MAIN_CLASS_NAME" value="com.jvmup.nbbs.service.CommentServiceTest" />
+      <option name="METHOD_NAME" value="testGetCommentById" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -997,7 +996,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="UserServiceTest.testRemoveWord" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PostServiceTest.testGetPostBySection" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NBBS_test" />
       <extension name="coverage">
         <pattern>
@@ -1009,8 +1008,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.jvmup.nbbs.service" />
-      <option name="MAIN_CLASS_NAME" value="com.jvmup.nbbs.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testRemoveWord" />
+      <option name="MAIN_CLASS_NAME" value="com.jvmup.nbbs.service.PostServiceTest" />
+      <option name="METHOD_NAME" value="testGetPostBySection" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1121,19 +1120,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Unnamed" />
-      <item itemvalue="TestNG.UserServiceTest.testRemoveWord" />
-      <item itemvalue="TestNG.UserServiceTest.testGetFollow" />
-      <item itemvalue="TestNG.UserServiceTest.testAddFollow" />
-      <item itemvalue="TestNG.UserServiceTest.testGetFans" />
-      <item itemvalue="TestNG.UserServiceTest.testAddFans" />
+      <item itemvalue="TestNG.CommentServiceTest.testGetCommentById" />
+      <item itemvalue="TestNG.CommentServiceTest.testAddComment" />
+      <item itemvalue="TestNG.CommentServiceTest.testGetAllCommentByPostId" />
+      <item itemvalue="TestNG.CommentServiceTest.testDeleteCommentById" />
+      <item itemvalue="TestNG.PostServiceTest.testGetPostBySection" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserServiceTest.testAddFollow" />
-        <item itemvalue="TestNG.UserServiceTest.testAddFans" />
-        <item itemvalue="TestNG.UserServiceTest.testGetFans" />
-        <item itemvalue="TestNG.UserServiceTest.testGetFollow" />
-        <item itemvalue="TestNG.UserServiceTest.testRemoveWord" />
+        <item itemvalue="TestNG.PostServiceTest.testGetPostBySection" />
+        <item itemvalue="TestNG.CommentServiceTest.testDeleteCommentById" />
+        <item itemvalue="TestNG.CommentServiceTest.testGetAllCommentByPostId" />
+        <item itemvalue="TestNG.CommentServiceTest.testAddComment" />
+        <item itemvalue="TestNG.CommentServiceTest.testGetCommentById" />
       </list>
     </recent_temporary>
   </component>
@@ -1166,6 +1165,7 @@
       <workItem from="1531824292724" duration="8479000" />
       <workItem from="1531873293425" duration="1588000" />
       <workItem from="1531875224495" duration="897000" />
+      <workItem from="1531890037139" duration="24924000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1531535841355</created>
@@ -1206,46 +1206,45 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserServiceTest_testAddWord - 2018.07.17 at 20h 18m 15s.xml">
-      <configuration name="UserServiceTest.testAddWord" configurationId="TestNG" />
+    <history-entry file="CommentServiceTest_testDeleteCommentById - 2018.07.18 at 18h 23m 05s.xml">
+      <configuration name="CommentServiceTest.testDeleteCommentById" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserServiceTest_testRemoveWord - 2018.07.17 at 20h 18m 36s.xml">
-      <configuration name="UserServiceTest.testRemoveWord" configurationId="TestNG" />
+    <history-entry file="PostServiceTest_testGetPostBySection - 2018.07.18 at 20h 05m 26s.xml">
+      <configuration name="PostServiceTest.testGetPostBySection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserServiceTest_testRemoveWord - 2018.07.17 at 20h 18m 45s.xml">
-      <configuration name="UserServiceTest.testRemoveWord" configurationId="TestNG" />
+    <history-entry file="PostServiceTest_testGetPostBySection - 2018.07.18 at 20h 05m 47s.xml">
+      <configuration name="PostServiceTest.testGetPostBySection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserServiceTest_testGetFollow - 2018.07.17 at 20h 18m 57s.xml">
-      <configuration name="UserServiceTest.testGetFollow" configurationId="TestNG" />
+    <history-entry file="PostServiceTest_testGetPostBySection - 2018.07.18 at 20h 06m 21s.xml">
+      <configuration name="PostServiceTest.testGetPostBySection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserServiceTest_testAddFollow - 2018.07.17 at 20h 20m 08s.xml">
-      <configuration name="UserServiceTest.testAddFollow" configurationId="TestNG" />
+    <history-entry file="PostServiceTest_testGetPostBySection - 2018.07.18 at 20h 06m 54s.xml">
+      <configuration name="PostServiceTest.testGetPostBySection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserServiceTest_testGetFollow - 2018.07.17 at 20h 21m 42s.xml">
-      <configuration name="UserServiceTest.testGetFollow" configurationId="TestNG" />
+    <history-entry file="PostServiceTest_testGetPostBySection - 2018.07.18 at 20h 08m 05s.xml">
+      <configuration name="PostServiceTest.testGetPostBySection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserServiceTest_testGetFans - 2018.07.17 at 20h 22m 13s.xml">
-      <configuration name="UserServiceTest.testGetFans" configurationId="TestNG" />
+    <history-entry file="PostServiceTest_testGetPostBySection - 2018.07.18 at 20h 09m 26s.xml">
+      <configuration name="PostServiceTest.testGetPostBySection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserServiceTest_testAddFans - 2018.07.17 at 20h 25m 34s.xml">
-      <configuration name="UserServiceTest.testAddFans" configurationId="TestNG" />
+    <history-entry file="PostServiceTest_testGetPostBySection - 2018.07.18 at 20h 10m 09s.xml">
+      <configuration name="PostServiceTest.testGetPostBySection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserServiceTest_testAddFollow - 2018.07.17 at 20h 26m 12s.xml">
-      <configuration name="UserServiceTest.testAddFollow" configurationId="TestNG" />
+    <history-entry file="PostServiceTest_testGetPostBySection - 2018.07.18 at 20h 10m 37s.xml">
+      <configuration name="PostServiceTest.testGetPostBySection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserServiceTest_testAddFollow - 2018.07.17 at 20h 28m 04s.xml">
-      <configuration name="UserServiceTest.testAddFollow" configurationId="TestNG" />
+    <history-entry file="PostServiceTest_testGetPostBySection - 2018.07.18 at 20h 11m 18s.xml">
+      <configuration name="PostServiceTest.testGetPostBySection" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123847000" />
+    <option name="totallyTimeSpent" value="148771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053823" side_tool="true" weight="0.32969433" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053823" side_tool="true" weight="0.65611356" />
       <window_info anchor="bottom" id="Application Servers" order="9" sideWeight="0.4994618" weight="0.3286026" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
@@ -1257,23 +1256,23 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.45087337" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32969433" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.48580787" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994618" weight="0.6342795" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32969433" />
       <window_info anchor="bottom" id="Spring" order="16" weight="0.32969433" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.8329694" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21205598" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.7871179" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21205598" />
       <window_info anchor="right" id="Bean Validation" order="4" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.45087337" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Database Console" order="7" weight="0.8919214" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969433" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -1306,189 +1305,34 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/redis.properties">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Sex.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext/applicationContext-service.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        <state relative-caret-position="228">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/util/SexTypeHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/UserCacheService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/nbbs-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="55" column="8" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+        <state relative-caret-position="361">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        <state relative-caret-position="258">
+          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1499,149 +1343,462 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/UserCacheService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="22" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="39" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="311">
+            <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="4" selection-end-line="103" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user_word">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/ab3976d4574c48d22dc1abf6a9e8bd0fdf928223/javax.servlet-api-3.1.0-sources.jar!/javax/servlet/http/HttpSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="229" column="18" selection-start-line="229" selection-start-column="18" selection-end-line="229" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/nbbs-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/CodeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="46" column="39" lean-forward="true" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/admin_partition">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/util/MailUtilTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/StaticController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="62" lean-forward="true" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/UserServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="176" column="24" lean-forward="true" selection-start-line="176" selection-start-column="24" selection-end-line="176" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        <state relative-caret-position="418">
+          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
+        <state relative-caret-position="294">
+          <caret line="38" column="33" lean-forward="true" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user_fans">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/PartitionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#530#531#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/PartitionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding>
+            <marker date="1531902292319" expanded="true" signature="430:532" ph="..." />
+            <marker date="1531902292319" expanded="true" signature="2620:3016" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/bbs_partition">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/PartitionDao.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/CommentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/SectionDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/Comment.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/SectionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/PartitionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/CodeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/CommentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" selection-start-line="17" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/PostMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1900">
-          <caret line="100" column="291" selection-start-line="100" selection-start-column="291" selection-end-line="100" selection-end-column="291" />
+    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        <state relative-caret-position="133">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="9" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/PartitionServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#1129#1130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/PartitionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/PartitionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/UserServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/SectionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#859#860#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1285#1286#0" expanded="true" />
+            <element signature="e#1371#1372#0" expanded="true" />
+            <element signature="e#1403#1404#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/SectionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/SectionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="40" column="109" selection-start-line="40" selection-start-column="109" selection-end-line="40" selection-end-column="109" />
+          <folding>
+            <element signature="e#9#209#0" />
+            <element signature="e#10#441#0" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/post">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/CommentMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+        <state relative-caret-position="149">
+          <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/CommentServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding>
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1188#1189#0" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/BasePo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Section.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Sex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/ResponseStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/CommentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/comment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sqlMapperConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/schema/nbbs/table/comment.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Partition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/console_2.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ed62af5f-c8dc-45d4-9cb8-31d1e089a0b9/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="76" column="1" lean-forward="true" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/SectionServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/service/PostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+          <folding>
+            <element signature="e#2494#2495#0" expanded="true" />
+            <element signature="e#2540#2541#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3031#3032#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/dao/PostDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/controller/PostController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/jvmup/nbbs/service/PostServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+          <folding>
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jvmup/nbbs/mapper/PostMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="68" column="51" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jvmup/nbbs/po/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
+          <folding>
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#903#904#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1046#1047#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="e#1106#1107#0" expanded="true" />
+            <element signature="e#1133#1134#0" expanded="true" />
+            <element signature="e#1159#1160#0" expanded="true" />
+            <element signature="e#1194#1195#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1015#1016#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
+            <element signature="e#1107#1108#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="e#1217#1218#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1293#1294#0" expanded="true" />
+            <element signature="e#1331#1332#0" expanded="true" />
+            <element signature="e#1521#1522#0" expanded="true" />
+            <element signature="e#1548#1549#0" expanded="true" />
+            <element signature="e#1585#1586#0" expanded="true" />
+            <element signature="e#1617#1618#0" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+            <element signature="e#1672#1673#0" expanded="true" />
+            <element signature="e#1709#1710#0" expanded="true" />
+            <element signature="e#1741#1742#0" expanded="true" />
+            <element signature="e#1772#1773#0" expanded="true" />
+            <element signature="e#1802#1803#0" expanded="true" />
+            <element signature="e#1845#1846#0" expanded="true" />
+            <element signature="e#1883#1884#0" expanded="true" />
+            <element signature="e#2082#2083#0" expanded="true" />
+            <element signature="e#2116#2117#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
+            <element signature="e#2223#2224#0" expanded="true" />
+            <element signature="e#2262#2263#0" expanded="true" />
+            <element signature="e#2293#2294#0" expanded="true" />
+            <element signature="e#2345#2346#0" expanded="true" />
+            <element signature="e#2385#2386#0" expanded="true" />
+            <element signature="e#2426#2427#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2515#2516#0" expanded="true" />
+            <element signature="e#2559#2560#0" expanded="true" />
+            <element signature="e#2600#2601#0" expanded="true" />
+            <element signature="e#2633#2634#0" expanded="true" />
+            <element signature="e#2689#2690#0" expanded="true" />
+            <element signature="e#2733#2734#0" expanded="true" />
+            <element signature="e#2778#2779#0" expanded="true" />
+            <element signature="e#2815#2816#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

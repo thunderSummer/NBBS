@@ -1,5 +1,6 @@
 package com.jvmup.nbbs.po;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.apache.ibatis.type.Alias;
 
 import java.util.Date;
@@ -12,6 +13,7 @@ import java.util.List;
  * <p>
  * Created by xxl on - 2018-07-14 21:19
  **/
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @Alias("post")
 public class Post extends BasePo {
     private int id;
@@ -20,14 +22,57 @@ public class Post extends BasePo {
     private String content;
     private int type;
     private int topping;
-    private Date createTIme;
+    private Date createTime;
     private int view;
-    private int sectionId;
+    private Section section;
+    private String brief;
     private List<Comment> commentList;
     private List<User> likeList;
     private List<User> unlikeList;
     private List<User> reportList;
     private List<User> collectionList;
+    private int hot;
+    private int commentNum;
+
+    public void setSection(Section section) {
+        this.section = section;
+    }
+
+    public Section getSection() {
+        return section;
+    }
+
+    public int getCommentNum() {
+        return commentNum;
+    }
+
+    public void setCommentNum(int commentNum) {
+        this.commentNum = commentNum;
+    }
+
+    public void setBrief(String brief) {
+        this.brief = brief;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getBrief() {
+        return brief;
+    }
+
+    public int getHot() {
+        return hot;
+    }
+
+    public void setHot(int hot) {
+        this.hot = hot;
+    }
 
     public Post() {
     }
@@ -64,14 +109,6 @@ public class Post extends BasePo {
         this.content = content;
     }
 
-    public Date getCreateTIme() {
-        return createTIme;
-    }
-
-    public void setCreateTIme(Date createTIme) {
-        this.createTIme = createTIme;
-    }
-
     public int getView() {
         return view;
     }
@@ -96,13 +133,6 @@ public class Post extends BasePo {
         this.topping = topping;
     }
 
-    public int getSectionId() {
-        return sectionId;
-    }
-
-    public void setSectionId(int sectionId) {
-        this.sectionId = sectionId;
-    }
 
     public List<Comment> getCommentList() {
         return commentList;

@@ -9,8 +9,8 @@
 
     <context:property-placeholder location="classpath:redis.properties"/>
 
-    <import resource="spring-redis.xml"/>
-    <cache:annotation-driven/>
+    <!--<import resource="spring-redis.xml"/>-->
+    <!--<cache:annotation-driven/>-->
     <!--<bean id="cacheManager" class="org.springframework.cache.concurrent.ConcurrentMapCacheManager">-->
     <!--</bean>-->
 </beans>

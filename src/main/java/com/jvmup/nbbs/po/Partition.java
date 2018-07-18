@@ -2,6 +2,8 @@ package com.jvmup.nbbs.po;
 
 import org.apache.ibatis.type.Alias;
 
+import java.util.List;
+
 /**
  * ProjectName: NBBS
  *
@@ -13,6 +15,25 @@ import org.apache.ibatis.type.Alias;
 public class Partition extends BasePo {
     private int id;
     private String title;
+
+    private List<User> partitionOwner;
+    private List<Section> sections;
+
+    public List<User> getPartionOwner() {
+        return partitionOwner;
+    }
+
+    public void setPartionOwner(List<User> partionOwner) {
+        this.partitionOwner = partionOwner;
+    }
+
+    public List<Section> getSections() {
+        return sections;
+    }
+
+    public void setSections(List<Section> sections) {
+        this.sections = sections;
+    }
 
     public Partition() {
     }

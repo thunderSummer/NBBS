@@ -53,6 +53,12 @@ public class UserController {
         }
         return new ResponseStyle().failure("验证码错误");
     }
+
+    /**
+     *
+     * @param user 传入user参数
+     * @return
+     */
     @RequestMapping(value = "/user/login",method = RequestMethod.POST)
     public ResponseStyle userLogin(@RequestBody User user,HttpServletRequest request){
         HttpSession session = request.getSession();
@@ -65,6 +71,7 @@ public class UserController {
             }
         }
         user.setNickname(userService.getNicknameByEmail(user.getEmail()));
+        user.setId(userService.getIdByEmail(user.getEmail()));
         session.setAttribute(StringUtil.loginStatus,user);
         return new ResponseStyle().success();
     }
@@ -76,9 +83,16 @@ public class UserController {
     }
 
     @RequestMapping(value = "/user/info",method = RequestMethod.POST)
-    public ResponseStyle getOwnUserInfo(HttpServletRequest request){
-        return new ResponseStyle().success(userService.getUserInfo(1));
+    public ResponseStyle getOwnerUserInfo(HttpServletRequest request){
+        User user = (User) request.getSession().getAttribute(StringUtil.loginStatus);
+        return new ResponseStyle().success(1);
     }
+
+    @RequestMapping(value = "/user/info/{nickname}",method = RequestMethod.GET)
+    public ResponseStyle getOtherInfo(HttpServletRequest request,@PathVariable String nickname){
+        return new ResponseStyle().success();
+    }
+
 
 
 

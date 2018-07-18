@@ -1,5 +1,6 @@
 package com.jvmup.nbbs.po;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.apache.ibatis.type.Alias;
 
 /**
@@ -9,6 +10,7 @@ import org.apache.ibatis.type.Alias;
  * <p>
  * Created by xxl on - 2018-07-14 21:30
  **/
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @Alias("comment")
 public class Comment extends BasePo {
     private int id;
@@ -18,7 +20,17 @@ public class Comment extends BasePo {
     private User user;
     private String time;
 
+    private int commentNum;
+
     public Comment() {
+    }
+
+    public int getCommentNum() {
+        return commentNum;
+    }
+
+    public void setCommentNum(int commentNum) {
+        this.commentNum = commentNum;
     }
 
     public int getId() {

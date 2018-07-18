@@ -31,7 +31,7 @@ public class CodeController {
         this.mailUtil = mailUtil;
     }
 
-    @RequestMapping(value = "/user/verification",method = RequestMethod.POST)
+    @RequestMapping(value = "/user/vCode",method = RequestMethod.POST)
     public ResponseStyle handleVCode(HttpServletRequest request, @RequestBody Param param){
        String vCode = String.valueOf((int)((Math.random()*9+1)*100000));
        switch (param.type){
@@ -60,7 +60,7 @@ public class CodeController {
 
     }
 
-    class Param{
+    static class Param{
         @Email
         private String email;
         private int type;
@@ -80,5 +80,6 @@ public class CodeController {
         public int getType() {
             return type;
         }
+        public Param(){}
     }
 }

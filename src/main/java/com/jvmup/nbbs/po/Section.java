@@ -1,5 +1,9 @@
 package com.jvmup.nbbs.po;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+import java.util.List;
+
 /**
  * ProjectName: NBBS
  *
@@ -7,11 +11,21 @@ package com.jvmup.nbbs.po;
  * <p>
  * Created by xxl on - 2018-07-15 13:50
  **/
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Section {
     private int id;
     private String title;
     private String announcement;
     private Partition partition;
+    private List<User> sectionOwner;
+
+    public List<User> getSectionOwner() {
+        return sectionOwner;
+    }
+
+    public void setSectionOwner(List<User> sectionOwner) {
+        this.sectionOwner = sectionOwner;
+    }
 
     public Section() {
     }

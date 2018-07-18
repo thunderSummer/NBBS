@@ -1,5 +1,6 @@
 package com.jvmup.nbbs.po;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum Sex {

@@ -106,9 +106,8 @@ url: /user/register post请求
 * 注册1 或者登录2 或者找回密码3，更新邮箱4 需要通知服务器端发送验证码 url : /user/verification post请求
 ```json
     {
-      "user":{
-      "email":"String"
-      },
+   
+      "email":"String(我qq邮箱接受不到消息。163邮箱可以)",
       "type": "int"
     }
 ```
