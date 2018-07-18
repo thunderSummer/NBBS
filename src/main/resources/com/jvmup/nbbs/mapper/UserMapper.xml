@@ -7,25 +7,25 @@
         <result property="nickname" column="nickname"/>
         <result property="sex" column="sex" typeHandler="com.jvmup.nbbs.util.SexTypeHandler"/>
         <result property="avatar" column="avatar"/>
-        <result property="createTime" column="create_time"/>
+        <result property="createTime" column="createTime"/>
     </resultMap>
     <resultMap id="userResult" type="user" autoMapping="true">
         <result column="sex" property="sex" typeHandler="com.jvmup.nbbs.util.SexTypeHandler"/>
-        <result column="create_time" property="create_time"/>
+        <result column="create_time" property="createTime"/>
         <collection property="fanList" ofType="user" columnPrefix="fans_" resultMap="otherUserResult"/>
         <collection property="blackList" ofType="user" columnPrefix="black_" resultMap="otherUserResult"/>
         <collection property="followList" ofType="user" columnPrefix="follow_" resultMap="otherUserResult"/>
     </resultMap>
-    <select id="getIdByNickname">
-        select id from user where nickname =#{nickName}
+    <select id="getIdByNickname" resultType="int">
+        select id as id from user where nickname =#{nickName}
     </select>
     <update id="updateUserInfo" parameterType="user">
         update user
         <set>
-            <if test="sex != null">sex=#{sex}</if>
-            <if test="phone != null and phone != ''">phone = #{phone}</if>
-            <if test="signature !=null and phone != ''">signature = #{signature}</if>
-            <if test="avatar !=null and avatar != ''">avatar = #{avatar}</if>
+            <if test="sex != null">sex=#{sex},</if>
+            <if test="phone != null and phone != ''">phone = #{phone},</if>
+            <if test="signature !=null and phone != ''"> signature = #{signature},</if>
+            <if test="avatar !=null and avatar != ''">avatar = #{avatar},</if>
         </set>
         where id= #{id}
     </update>
@@ -44,27 +44,18 @@
         update user set status = #{status} where id =#{id}
     </update>
 
-    <select id="getUserInfo">
-        select u1.avatar, u1.nickname,u1.email,u1.sex,u1.signature,u1.ex,u1.create_time,u1.phone from use u1 where u1.id = #{id}
+    <select id="getUserInfo" resultMap="userResult">
+        select u1.avatar, u1.nickname,u1.email,u1.sex,u1.signature,u1.ex,u1.create_time,u1.phone from user u1 where u1.id = #{id}
     </select>
 
-    <select id="getFansNum" resultType="int">
-        select count(*) as num from user_fans where user_fans.fllowed_id=#{id}
+    <select id="getFans" resultMap="otherUserResult">
+        select sex ,nickname ,create_time ,avatar  from user_fans left join user on user.id= user_fans.fllow_id where user_fans.fllowed_id = #{id}
     </select>
-    <select id="getFans" resultMap="userResult">
-        select sex as fans_sex,nickname as fans_nickname,create_time as fans_createTime,avatar as fans_avatar from user_fans left join user on user.id= user_fans.fllowed_id where user_fans.fllowed_id = #{id}
+    <select id="getFollows" resultMap="otherUserResult">
+        select sex ,nickname ,create_time ,avatar from user_fans left join user on user.id= user_fans.fllowed_id where user_fans.fllow_id = #{id}
     </select>
-    <select id="getFollowNum" resultType="int">
-        select count(*) as num from user_fans where user_fans.fllow_id=#{id}
-    </select>
-    <select id="getFollows" resultMap="userResult">
-        select sex as follow_sex,nickname as follow_nickname,create_time as follow_createTime,avatar as follow_avatar from user_fans left join user on user.id= user_fans.fllowed_id where user_fans.fllowed_id = #{id}
-    </select>
-    <select id="getBlackNum" resultType="int">
-        select count(*) as num from user_black where user_black.black_id=#{id}
-    </select>
-    <select id="getBlack" resultMap="int">
-        select sex as black_sex,nickname as black_nickname,create_time as black_createTime,avatar as black_avatar from  user_black left join user on user.id = user_black.blacked_id where user_black.black_id = #{id}
+    <select id="getBlack" resultMap="otherUserResult">
+        select sex ,nickname ,create_time ,avatar as black_avatar from  user_black left join user on user.id = user_black.blacked_id where user_black.black_id = #{id}
     </select>
     <insert id="addFans">
         insert into user_fans (fllow_id, fllowed_id) values (#{reqId},#{desId});
@@ -93,7 +84,16 @@
     <insert id="addUser" keyProperty="id" useGeneratedKeys="true">
         insert into user(nickname, email, password) values (#{nickname},#{email},#{password})
     </insert>
-    <insert id="sdf">
-        insert into user_black(black_id, blacked_id) values ()
-    </insert>
+    <select id="findUserPwd" resultType="string">
+        select password from user where id =#{id}
+    </select>
+    <select id="getNicknameByEmail" resultType="string">
+        select nickname from user where email=#{email}
+    </select>
+    <select id="getIdByEmail" resultType="int">
+        select id from user where email=#{email}
+    </select>
+    <select id="getMaskWord" resultType="string">
+        select word from user_word where user_id=#{id}
+    </select>
 </mapper>

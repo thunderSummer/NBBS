@@ -24,7 +24,7 @@
         <!--</mvc:interceptor>-->
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
-            <bean class="com.jvmup.nbbs.interceptor.UserVerifyInterceptor"/>
+            <bean class="com.jvmup.nbbs.interceptor.StaticHtmlCheckInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
     <bean class="com.jvmup.nbbs.aspect.PermissionAspect"/>

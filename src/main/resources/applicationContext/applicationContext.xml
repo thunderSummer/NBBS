@@ -3,4 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <import resource="classpath*:applicationContext/applicationContext-*.xml"/>
+    <bean id="mailMessage" class="org.springframework.mail.SimpleMailMessage"/>
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"/>
+    <bean id="properties" class="java.util.Properties"/>
+    <bean id="mailUtil" class="com.jvmup.nbbs.util.MailUtil"/>
+
 </beans>

@@ -3,4 +3,34 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jvmup.nbbs.dao.PartitionDao">
+
+    <select id="getAllPartition" resultType="partition">
+        select * from nbbs.bbs_partition
+    </select>
+    <select id="getPartitionInfo" resultType="partition">
+        select *from nbbs.bbs_partition where id=#{parid}
+    </select>
+    <update id="UpdatePartiTitle">
+        update title
+        <set>
+            <if test="title!=null">title=#{title}</if>
+        </set>
+        where id=#{id}
+    </update>
+    <delete id="removePartiTitle">
+        delete from title where id=#{id}
+    </delete>
+    <update id="updatePartition">
+        update Partition
+        <set>
+            <if test="title!=null">title=#{title}</if>
+        </set>
+        where id=#{id};
+    </update>
+    <delete id="removePartition">
+        delete from nbbs.bbs_partition where id=#{parid}
+    </delete>
+    <insert id="addPartition">
+        insert into nbbs.bbs_partition(id,title) values(id,title)
+    </insert>
 </mapper>

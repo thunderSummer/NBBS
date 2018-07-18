@@ -3,4 +3,58 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jvmup.nbbs.dao.SectionDao">
+    <update id="updateSection">
+        update nbbs.section
+        <set>
+           <if test="title!=null">title=#{title}</if>
+            <if test="announcenment!=null">announcement=#{announcement}</if>
+            <if test="partition_id!=null">partition_id=#{partition_id}</if>
+        </set>
+        where id=#{id}
+    </update>
+    <update id="updateTitle">
+        update nbbs.section
+        <set>
+            <if test="title!=null">title=#{title}</if>
+        </set>
+        where id=#{id}
+    </update>
+    <select id="getTitle" resultType="title">
+        select title from nbbs.section where id=#{id}
+    </select>
+    <update id="updateAnnouncement">
+        update nbbs.section
+        <set>
+            <if test="announcement!=null">announcement=#{announcement}</if>
+        </set>
+        where id=#{id}
+    </update>
+    <select id="getAnnouncement" resultType="getAnnouncement">
+        select announcement from nbbs.section where id=#{id}
+    </select>
+    <update id="updatePartitionid">
+        update nbbs.section
+        <set>
+            <if test="partition!=null">partition=#{partition}</if>
+        </set>
+        where id=#{id}
+    </update>
+    <select id="getPartitionid" resultType="partition_id">
+        select id from section where id=#{id}
+    </select>
+    <insert id="addSection">
+        insert into section(title,announcement,partition_id)values (#{title},#{announcement},#{partition_id})
+    </insert>
+    <delete id="removeAnnouncement">
+        delete from announcement where id=#{id}
+    </delete>
+    <delete id="removeSection">
+        delete from section where id=#{id}
+    </delete>
+    <select id="getSectionInfo" resultType="section">
+        select * from section where id=#{id}
+    </select>
+    <select id="getAllSection" resultType="section">
+        select section from nbbs
+    </select>
 </mapper>

@@ -1,6 +1,8 @@
 package com.jvmup.nbbs.controller;
 
+import com.jvmup.nbbs.po.ResponseStyle;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * ProjectName: NBBS
@@ -11,4 +13,9 @@ import org.springframework.stereotype.Controller;
  **/
 @Controller
 public class StaticController {
+
+    @RequestMapping("/YouShouldLoginToAccessWeb")
+    public String  LoginStatusInvalid(){
+        return "login";
+    }
 }

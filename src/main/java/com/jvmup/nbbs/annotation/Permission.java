@@ -17,7 +17,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface Permission {
     /**
-     * @return 返回要求的最小权限，0代表所有人,1代表所有已登录用户，2代表仅自己，3代表版主，4代表管理员
+     * @return 返回要求的最小权限，0代表所有人,1代表所有已登录用户，2代表仅自己，3代表分区版主，4代表版块版主，5代表管理员
      */
     int classify() default  1;
 }

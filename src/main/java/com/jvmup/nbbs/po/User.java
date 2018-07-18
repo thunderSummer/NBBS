@@ -15,7 +15,7 @@ import java.util.List;
  *
  * Created by xxl on 2018-07-14 13:51
  **/
-@JsonInclude(JsonInclude.Include.NON_DEFAULT)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @Alias("user")
 public class User extends BasePo {
     private int id;
@@ -32,12 +32,19 @@ public class User extends BasePo {
     @JsonProperty("fans")
     private List<User> fanList;
     private List<Post> likeList;
+
     private List<User> blackList;
+
     private List<Post> reportList;
+
     private List<Post> collectionList;
+
     private List<Post> unlikeList;
+
     private List<String> maskWordList;
+
     private List<String> postList;
+
     private List<User> followList;
 
     public List<User> getFollowList() {

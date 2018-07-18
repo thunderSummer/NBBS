@@ -1,5 +1,6 @@
 package com.jvmup.nbbs.controller;
 
+import com.jvmup.nbbs.annotation.NeedLogin;
 import com.jvmup.nbbs.annotation.UserConsistent;
 import com.jvmup.nbbs.po.Post;
 import com.jvmup.nbbs.po.ResponseStyle;
@@ -72,6 +73,11 @@ public class UserController {
     public ResponseStyle userLogout(HttpServletRequest request,@RequestBody User user){
         request.getSession().removeAttribute(StringUtil.loginStatus);
         return new ResponseStyle().success();
+    }
+
+    @RequestMapping(value = "/user/info",method = RequestMethod.POST)
+    public ResponseStyle getOwnUserInfo(HttpServletRequest request){
+        return new ResponseStyle().success(userService.getUserInfo(1));
     }
 
 
