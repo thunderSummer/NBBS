@@ -93,7 +93,7 @@ url: /user/register post请求
         "password": "String",
         "nickname":"String"
     },
-    "verificationCode":"String(如果是服务端验证需要这一条，本地不需要)"
+    "vCode":"String"
   }
 ```
 * 登录时，需求用户邮箱，用户密码，验证码(本地，通过验证才可以提交) url: /user/login post请求
@@ -103,7 +103,7 @@ url: /user/register post请求
       "password": "String"
     }
 ```
-* 注册1 或者登录2 或者找回密码3，更新邮箱4 需要通知服务器端发送验证码 url : /user/verification post请求
+* 注册 typ11 或者登录type2(可能用不到) 或者找回密码3，更新邮箱4 需要通知服务器端发送验证码 url : /user/verification post请求
 ```json
     {
    
@@ -111,16 +111,35 @@ url: /user/register post请求
       "type": "int"
     }
 ```
-* 找回密码,需求的数据，用户邮箱，新的密码，服务器端的验证码 url : /user/forget/password put 请求
+* 找回密码,需求的数据，新的密码，服务器端的验证码 url : /user/password put 请求
 ```json
     {
       "user":{
-       "email":"String",
        "password":"String"
       },
-      "verificationCode": "String"
+      "vCode": "String"
     }
 ```  
+* 获取某个用户的状态，url: /user/status post 请求
+
+返回格式 第一个代表他不是不是登录了，第二个代表他是不是本版块的版主，或者他是不是版主，第三个类似第二个
+```json
+{
+  "user":"布尔型",
+  "adminSection":"布尔型",
+  "adminPartition":"布尔型"
+}
+```
+
+请求格式 如果是针对特对版块，特对分区填上id，如果不针对特定版块，特定分区 那就为0,
+
+```json
+{
+  "partitionId":"int",
+  "sectionId":"int"
+}
+
+```
 ###3、个人信息模块(注： 若有新增加 数据，例如，用户论坛坛龄，请自行在相应的的json代码段中添加)
 * 获取个人信息(已登录的用户查看自己的信息) url:/user/info get请求，下面是返回的数据，均位于上述data里面
 ```json
@@ -142,7 +161,7 @@ url: /user/register post请求
 ```json
   {
      "nickname":"String",
-     "sex":"String",
+     "sex":"String(“男” “女”)",
      "signature": "String",
      "phone":"String"
   }
@@ -162,20 +181,24 @@ url: /user/register post请求
        "user":{
              "password":"String"
            },
-           "verificationCode":"String"
+           "vCode":"String"
     }
 ```
-* 获取关注人，拉黑人，粉丝的数量 url:/user/attentionNum(blacklistNum,fansNum) get 请求 返回格式
+* 获取关注人，拉黑人，粉丝的数量 url:/user/FBF/num get 请求 返回格式
 ```json
 {
      "meta": {
             "success": true,
             "message": "ok"
         },
-        "data": "int"
+        "data": {
+        "fans":"int",
+        "black":"int",
+        "follow":"int"
+        }
 }
 ```
-* 获取关注人，拉黑人，粉丝的简介信息 url: /user/attention(blacklist,fans) get请求 返回格式
+* 获取关注人，拉黑人，粉丝的简介信息 url: /user/follow(black,fans) get请求 返回格式
 ```json
 {
      "meta": {
@@ -190,7 +213,7 @@ url: /user/register post请求
         }]
 }
 ```
-* 获取其他用户的详细信息 url: /user/${nickName} get请求，返回格式
+* 获取其他用户的详细信息 url: /user/userInfo/${nickName} get请求，返回格式
 ```json
 {
     "email":"String",
@@ -201,6 +224,20 @@ url: /user/register post请求
     "ex":"int"
 }
 ```
-
+* 关注某人，拉黑某人 url: /user/follow(black) post 請求
+发送
+```json
+{
+ "nickname":"String"
+}
+```
+* 取消关注某人，取消拉黑某人，取消某人当我的粉丝 /user/follow(fans/black) delete请求
+发送
+```json
+{
+ "nickname":"String"
+}
+```
+* ，某人是不是我的关注，是不是我的黑名单，是不是我的粉丝 /user/isFollow(isFans 、isBlack)/{nickname} get请求
 
 
