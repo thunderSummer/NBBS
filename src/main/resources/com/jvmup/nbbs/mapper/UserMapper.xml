@@ -48,6 +48,10 @@
         select u1.avatar, u1.nickname,u1.email,u1.sex,u1.signature,u1.ex,u1.create_time,u1.phone from user u1 where u1.id = #{id}
     </select>
 
+    <select id="getOtherInfo" resultType="user">
+        select u1.avatar, u1.nickname,u1.signature,u1.create_time,u1.ex,u1.sex from user u1 where id=#{id}
+    </select>
+
     <select id="getFans" resultMap="otherUserResult">
         select sex ,nickname ,create_time ,avatar  from user_fans left join user on user.id= user_fans.fllow_id where user_fans.fllowed_id = #{id}
     </select>
@@ -57,26 +61,26 @@
     <select id="getBlack" resultMap="otherUserResult">
         select sex ,nickname ,create_time ,avatar as black_avatar from  user_black left join user on user.id = user_black.blacked_id where user_black.black_id = #{id}
     </select>
-    <insert id="addFans">
-        insert into user_fans (fllow_id, fllowed_id) values (#{reqId},#{desId});
-    </insert>
+    <!--<insert id="addFans">-->
+        <!--insert into user_fans (fllow_id, fllowed_id) values (#{reqId},#{desId});-->
+    <!--</insert>-->
     <insert id="addBlack">
         insert into user_black (black_id, blacked_id) values (#{reqId},#{desId});
     </insert>
     <insert id="addFollow">
-        insert into user_fans (fllowed_id, fllow_id) values (#{reqId},#{desId});
+        insert into user_fans (fllowed_id, fllow_id) values (#{desId},#{reqId});
     </insert>
     <insert id="addWord">
         insert into user_word (user_id, word) values (#{userId},#{word});
     </insert>
     <delete id="removeFans">
-        delete from user_fans where fllow_id=#{reqId} and fllowed_id=#{desId}
+        delete from user_fans where fllow_id=#{desId} and fllowed_id=#{reqId}
     </delete>
     <delete id="removeBlack">
         delete from user_black where black_id=#{reqId} and blacked_id=#{desId}
     </delete>
     <delete id="removeFollow">
-        delete from user_fans where fllowed_id=#{reqId} and fllow_id=#{desId}
+        delete from user_fans where fllow_id=#{reqId} and fllowed_id=#{desId}
     </delete>
     <delete id="removeWord">
         delete from user_word where user_id=#{userId} and word = #{word}
@@ -95,5 +99,26 @@
     </select>
     <select id="getMaskWord" resultType="string">
         select word from user_word where user_id=#{id}
+    </select>
+    <select id="isAP" resultType="int">
+        select count(id) as num from admin_partition where user_id=#{id} <if test="partitionId!=0">
+        and partition_id=#{partitionId}
+    </if>
+    </select>
+    <select id="isAS" resultType="int">
+        select count(id) as num from admin_section where user_id=#{id} <if test="sectionId!=0">
+        and section_id=#{sectionId}
+    </if>
+    </select>
+    <select id="isFansOrBlackOrFollow" resultType="int">
+        select count(*) as num from <if test="type==1">
+        from user_fans where fllow_id=#{reqId} and fllowed_id =#{desId}
+        <if test="type==2">
+            from user_black where blacked_id=#{reqId}  and black_id=#{desId}
+        </if>
+        <if test="type==3">
+            from user_fans where fllowed_#{reqId} and fllow_id =#{desId}
+        </if>
+    </if>
     </select>
 </mapper>
