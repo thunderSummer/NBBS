@@ -24,6 +24,8 @@ create table post(
   create_time datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间' not null ,
   view int(11) DEFAULT NULL COMMENT '浏览量',
   section_id int not null comment '版块id',
+  brief varchar(256) not null comment '简介',
+  comment_num int default 0 comment '评论数',
   primary key (id),check (type in (0,1,2)),check (topping in (0,1,2))
 ) character set = utf8;
 DROP TABLE IF EXISTS section;
@@ -78,7 +80,7 @@ DROP TABLE IF EXISTS user_report;
 create table user_report(
   user_id int not null comment '用户id',
   post_id int not null comment '举报的id',
-  reason int not null comment '举报的理由',
+  reason varchar (256)not null comment '举报的理由',
   primary key (user_id,post_id)
 )character set = utf8;
 DROP TABLE IF EXISTS user_like;
@@ -110,3 +112,6 @@ create table admin_section(
   section_id int not null comment '版块id',
   primary key (user_id,section_id)
 )character set = utf8;
+create table admin(
+  user_id int primary key
+)
