@@ -38,7 +38,7 @@ public interface UserDao {
 
     List<User> getBlack(int id);
 
-    void addFans(@Param("reqId")int reqId,@Param("desId") int desId);
+//    void addFans(@Param("reqId")int reqId,@Param("desId") int desId);
 
     void addBlack(@Param("reqId") int reqId,@Param("desId") int desId);
 
@@ -58,8 +58,19 @@ public interface UserDao {
 
     String getNicknameByEmail(String email);
 
+    int isAP(@Param("id") int id,@Param("partitionId") int partitionId);
+    int isAs(@Param("id") int id,@Param("sectionId") int sectionId);
 
+    User getOtherInfo(int id);
 
+    /**
+     * reqId 是不是 desId的xxxx
+     * @param reqId
+     * @param desId
+     * @param type
+     * @return
+     */
+    int isFansOrBlackOrFollow(@Param("reqId")int reqId,@Param("int") int desId,int type);
 
 
 

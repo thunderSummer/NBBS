@@ -1,5 +1,6 @@
 package com.jvmup.nbbs.service;
 
+import com.jvmup.nbbs.dao.CommentDao;
 import com.jvmup.nbbs.dao.UserDao;
 import com.jvmup.nbbs.exception.UserNotExistException;
 import com.jvmup.nbbs.po.User;
@@ -9,6 +10,8 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
+import java.util.function.BinaryOperator;
 
 /**
  * ProjectName: NBBS
@@ -22,6 +25,8 @@ public class UserService {
 
     private UserDao userDao;
     private UserCacheService userCacheService;
+
+
 
 
     @Autowired
@@ -45,6 +50,10 @@ public class UserService {
 
     public User getUserInfo(int userId){
         return userDao.getUserInfo(userId);
+    }
+
+    public User getOtherInfo(int userId){
+        return userDao.getOtherInfo(userId);
     }
 
     public void register(User user){
@@ -98,9 +107,9 @@ public class UserService {
         return userDao.getBlack(getIdByNickname(nickname));
     }
 
-    public void addFans(String reqNickname,String desNickname){
+/*    public void addFans(String reqNickname,String desNickname){
         userDao.addFans(getIdByNickname(reqNickname),getIdByNickname(desNickname));
-    }
+    }*/
 
     public void addBlack(String reqNickname,String desNickname){
         userDao.addBlack(getIdByNickname(reqNickname),getIdByNickname(desNickname));
@@ -125,9 +134,27 @@ public class UserService {
         userDao.removeWord(getIdByNickname(reqNickname),word);
     }
 
-    public void getFllow(String nickname){
-        userDao.getFollows(getIdByNickname(nickname));
+
+    public void getUserStatus(int userId, int partitionId, int sectionId, Map<String,Boolean> map){
+            map.put("adminPartition",userDao.isAP(userId,partitionId)>=1);
+            map.put("adminSection",userDao.isAs(userId,sectionId)>=1);
     }
 
+    public boolean isBlack(String reqName,String desName){
+        return userDao.isFansOrBlackOrFollow(getIdByNickname(reqName),getIdByNickname(desName),2)>=1;
+    }
+
+    /**
+     * req 是不是des的关注
+     * @param reqId
+     * @param desName
+     * @return
+     */
+    public boolean isFollow(int reqId,String desName){
+        return userDao.isFansOrBlackOrFollow(reqId,getIdByNickname(desName),3)>=1;
+    }
+    public boolean isFans(int reqId,String desName){
+        return userDao.isFansOrBlackOrFollow(reqId,getIdByNickname(desName),1)>=1;
+    }
 
 }
