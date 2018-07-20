@@ -27,8 +27,9 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests {
 
     @Test
     public void testGetIdByNickname() {
-        int id = userService.getIdByNickname("我是第一个用户");
-        assertEquals(id,1);
+        int id = userService.getIdByNickname("我是第一个户");
+        assertEquals(id,0);
+        boolean a = userService.isAdmin(999);
     }
 
     @Test
@@ -137,10 +138,6 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests {
         }
     }
 
-    @Test
-    public void testAddFans() {
-        userService.addFans("我是第三个用户","我是第一个用户");
-    }
 
     @Test
     public void testAddBlack() {

@@ -57,4 +57,7 @@
          from section left join bbs_partition on section.partition_id=bbs_partition.id left join admin_section on admin_section.section_id=section.id left join user on user.id = admin_section.user_id
          where partition_id=#{partitionId};
     </select>
+    <select id="permission" resultType="int">
+        select count(*) from admin_section where section_id=#{sectionId} and user_id=#{userId}
+    </select>
 </mapper>

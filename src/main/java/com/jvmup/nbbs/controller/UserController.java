@@ -267,7 +267,15 @@ public class UserController {
         userService.updateUserInfo(user1);
         return new ResponseStyle().success("信息更新成功");
     }
-
+    @RequestMapping(value = "/user/status",method = RequestMethod.PUT)
+    public ResponseStyle updateStatus(@RequestBody User user){
+        user.setId(userService.getIdByNickname(user.getNickname()));
+        if (userService.isAdmin(user.getId())){
+            userService.updateStatus(user);
+            return new ResponseStyle().success();
+        }
+        return new ResponseStyle().failure("没有权限");
+    }
 
 
     static class Param{

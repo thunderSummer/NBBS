@@ -22,7 +22,12 @@ public class UserCacheService {
     }
 //    @Cacheable(value = "nickname2id")
     public int getIdByNickname(String nickname){
-        return userDao.getIdByNickname(nickname);
+        Integer a = userDao.getIdByNickname(nickname);
+        if (a == null) {
+            return 0;
+        }else{
+            return a;
+        }
     }
 
 

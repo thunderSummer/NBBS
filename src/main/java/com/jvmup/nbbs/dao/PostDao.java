@@ -51,7 +51,7 @@ public interface PostDao {
      * 置顶post
      * @param id
      */
-    void toppingPost(int id);
+    void toppingPost(int id,int toppingType);
 
     /**
      * gzp 717 1201
@@ -112,4 +112,13 @@ public interface PostDao {
      */
 
     void incView(int id);
+
+
+    List<Post> getToppingPost();
+
+    Integer getUserIdByPostId(int postId);
+
+    void cancelCollection(@Param("postId") int postId, @Param("userId") int userId);
+
+    void cancelPraise(@Param("postId") int postId, @Param("userId") int userId);
 }

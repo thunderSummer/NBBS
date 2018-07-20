@@ -50,7 +50,7 @@ public class SectionServiceTest extends AbstractTestNGSpringContextTests {
 
     @Test
     public void testChangeSectionPartition1() {
-        sectionService.changeSectionPartition(1,5);
+//        sectionService.changeSectionPartition(1,5);
     }
 
     @Test

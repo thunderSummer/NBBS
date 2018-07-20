@@ -50,11 +50,9 @@ public class SectionService {
 
     /**
      * 改变板块的分区
-     * @param partitionId
-     * @param id
      */
-    public void changeSectionPartition(int partitionId, int id){
-        sectionDao.changeSectionPartition(partitionId,id);
+    public void changeSectionPartition(Section section){
+        sectionDao.changeSectionPartition(section.getPartition().getId(),section.getId());
     }
 
     /**

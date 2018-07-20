@@ -16,8 +16,8 @@
         <collection property="blackList" ofType="user" columnPrefix="black_" resultMap="otherUserResult"/>
         <collection property="followList" ofType="user" columnPrefix="follow_" resultMap="otherUserResult"/>
     </resultMap>
-    <select id="getIdByNickname" resultType="int">
-        select id as id from user where nickname =#{nickName}
+    <select id="getIdByNickname" resultType="Integer">
+        select nullif (id,0) as id from user where nickname =#{nickName}
     </select>
     <update id="updateUserInfo" parameterType="user">
         update user
@@ -94,19 +94,19 @@
     <select id="getNicknameByEmail" resultType="string">
         select nickname from user where email=#{email}
     </select>
-    <select id="getIdByEmail" resultType="int">
+    <select id="getIdByEmail" resultType="Integer">
         select id from user where email=#{email}
     </select>
     <select id="getMaskWord" resultType="string">
         select word from user_word where user_id=#{id}
     </select>
-    <select id="isAP" resultType="int">
-        select count(id) as num from admin_partition where user_id=#{id} <if test="partitionId!=0">
+    <select id="isAp" resultType="int">
+        select count(*) as num from admin_partition where user_id=#{id} <if test="partitionId!=0">
         and partition_id=#{partitionId}
     </if>
     </select>
-    <select id="isAS" resultType="int">
-        select count(id) as num from admin_section where user_id=#{id} <if test="sectionId!=0">
+    <select id="isAs" resultType='int'>
+        select count(*) as num from admin_section where user_id=#{id} <if test="sectionId!=0">
         and section_id=#{sectionId}
     </if>
     </select>
@@ -120,5 +120,14 @@
             from user_fans where fllowed_#{reqId} and fllow_id =#{desId}
         </if>
     </if>
+    </select>
+    <select id="isAdmin" resultType="int">
+        select count(*) from admin where user_id=#{id}
+    </select>
+    <select id="getIdByPostId" resultType="Integer">
+        select user_id from post where post.id=#{id}
+    </select>
+    <select id="getIdByCommentId" resultType="Integer">
+        select user_id from  comment where id=#{commentId}
     </select>
 </mapper>

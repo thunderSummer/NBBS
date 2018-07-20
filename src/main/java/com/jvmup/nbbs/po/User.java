@@ -1,5 +1,6 @@
 package com.jvmup.nbbs.po;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.ibatis.type.Alias;
@@ -177,11 +178,11 @@ public class User extends BasePo {
     public void setSex(Sex sex) {
         this.sex = sex;
     }
-
+    @JsonFormat(pattern = "yyyy-MM-dd-hh-mm")
     public Date getCreateTime() {
         return createTime;
     }
-
+    @JsonFormat(pattern = "yyyy-MM-dd-hh-mm")
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }

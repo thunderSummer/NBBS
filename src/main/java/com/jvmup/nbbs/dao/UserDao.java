@@ -3,6 +3,7 @@ package com.jvmup.nbbs.dao;
 import com.jvmup.nbbs.annotation.Permission;
 import com.jvmup.nbbs.po.Post;
 import com.jvmup.nbbs.po.User;
+import javafx.geometry.Pos;
 import org.apache.ibatis.annotations.Param;
 
 import javax.validation.constraints.Email;
@@ -14,8 +15,8 @@ public interface UserDao {
      * @param nickname
      * @return 返回用户的id
      */
-    int getIdByEmail(String nickname);
-    int getIdByNickname(String nickname);
+    Integer getIdByEmail(String nickname);
+    Integer getIdByNickname(String nickname);
 
     void updateUserInfo(User user);
 
@@ -58,7 +59,7 @@ public interface UserDao {
 
     String getNicknameByEmail(String email);
 
-    int isAP(@Param("id") int id,@Param("partitionId") int partitionId);
+    int isAp(@Param("id") int id,@Param("partitionId") int partitionId);
     int isAs(@Param("id") int id,@Param("sectionId") int sectionId);
 
     User getOtherInfo(int id);
@@ -72,6 +73,11 @@ public interface UserDao {
      */
     int isFansOrBlackOrFollow(@Param("reqId")int reqId,@Param("int") int desId,int type);
 
+    int isAdmin(int id);
 
+    Integer getIdByPostId(int postId);
+    List<Post> getTopPostBySection(int sectionId);
+
+    Integer getIdByCommentId(int commentId);
 
 }

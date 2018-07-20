@@ -2,12 +2,16 @@ package com.jvmup.nbbs.service;
 
 import com.jvmup.nbbs.dao.CommentDao;
 
+import com.jvmup.nbbs.dao.UserDao;
+import com.jvmup.nbbs.exception.DataInValidException;
+import com.jvmup.nbbs.exception.NoPermissionToGetData;
 import com.jvmup.nbbs.po.Comment;
 import com.jvmup.nbbs.po.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * ProjectName: NBBS
@@ -18,7 +22,15 @@ import java.util.List;
  **/
 @Service
 public class CommentService {
+    private UserDao userDao;
     private CommentDao commentDao;
+
+
+    @Autowired
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
+    }
+
     @Autowired
     public void setCommentDao(CommentDao commentDao){
         this.commentDao=commentDao;
@@ -47,8 +59,17 @@ public class CommentService {
      *     通过评论id删除评论
      * </p>
      */
-    public void deleteCommentById(int id){
-        commentDao.deleteCommentById(id);
+    public void deleteCommentById(int id,int userId) throws DataInValidException {
+        Integer a = userDao.getIdByCommentId(id);
+        if (a==null)
+            throw new DataInValidException();
+        if (a==userId)
+            commentDao.deleteCommentById(id);
+        else if (userDao.isAdmin(userId)==1|| hasPermission(id,userId))
+            commentDao.deleteCommentById(id);
+        else
+            throw new NoPermissionToGetData("没有权限删除");
+
     }
     /**
      * @author lhm
@@ -74,4 +95,13 @@ public class CommentService {
         return commentDao.getAllCommentByUserId(userId);
     }
 
+    private boolean hasPermission(int id,int userId) throws DataInValidException {
+        Map<String,Integer> map = commentDao.getCommentById(id);
+        if (map.size()==0)
+            throw new DataInValidException();
+        if (userDao.isAs(userId,map.get("section_id"))>=1){
+            return true;
+        }else
+            return userDao.isAp(userId, map.get("partition_id")) >= 1;
+    }
 }

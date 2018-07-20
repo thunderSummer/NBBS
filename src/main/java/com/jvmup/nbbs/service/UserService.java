@@ -136,7 +136,7 @@ public class UserService {
 
 
     public void getUserStatus(int userId, int partitionId, int sectionId, Map<String,Boolean> map){
-            map.put("adminPartition",userDao.isAP(userId,partitionId)>=1);
+            map.put("adminPartition",userDao.isAp(userId,partitionId)>=1);
             map.put("adminSection",userDao.isAs(userId,sectionId)>=1);
     }
 
@@ -155,6 +155,12 @@ public class UserService {
     }
     public boolean isFans(int reqId,String desName){
         return userDao.isFansOrBlackOrFollow(reqId,getIdByNickname(desName),1)>=1;
+    }
+    public int getIdByPostId(int postId){
+        return userDao.getIdByPostId(postId);
+    }
+    public boolean isAdmin(int userId){
+        return userDao.isAdmin(userId)==1;
     }
 
 }

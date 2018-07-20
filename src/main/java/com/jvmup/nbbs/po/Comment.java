@@ -1,5 +1,6 @@
 package com.jvmup.nbbs.po;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import org.apache.ibatis.type.Alias;
 
@@ -73,10 +74,11 @@ public class Comment extends BasePo {
         this.user = user;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd-hh-mm")
     public String getTime() {
         return time;
     }
-
+    @JsonFormat(pattern = "yyyy-MM-dd-hh-mm")
     public void setTime(String time) {
         this.time = time;
     }

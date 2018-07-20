@@ -13,13 +13,14 @@
         <association property="section" javaType="section">
             <id column="section_id" property="id"/>
             <result column="section_title" property="title"/>
+            <association property="partition" javaType="partition">
+                <id column="section_partition_id" property="id"/>
+            </association>
         </association>
         <association property="user" resultMap="userResult"/>
-        <collection property="likeList" ofType="user" >
-            <result property="nickname" column="like_nickname"/>
+        <collection property="likeList" ofType="user" resultMap="userResult" columnPrefix="like_" >
         </collection>
-        <collection property="collectionList" ofType="user">
-            <result property="nickname" column="collection_nickname"/>
+        <collection property="collectionList" ofType="user" resultMap="userResult" columnPrefix="collection_">
         </collection>
     </resultMap>
     <resultMap id="userResult" type="user">
@@ -42,13 +43,13 @@
         left join user_like on user_like.post_id=p.id
         left join user u2 on u2.id = user_like.user_id
         where p.section_id=#{sectionId} <if test="type==0">
-        order by p.create_time
+        order by p.create_time desc
         </if>
         <if test="type==2">
-            order by p.last_modify
+            order by p.last_modify desc
         </if>
         <if test="type==3">
-            order by  p.view +p.comment_num*3
+            order by  p.view +p.comment_num*3 desc
         </if>
     </select>
     <select id="getHotPost" resultMap="postResult">
@@ -61,12 +62,43 @@
         left join user u1 on user_collection.user_id=u1.id
         left join user_like on user_like.post_id=p.id
         left join user u2 on u2.id = user_like.user_id
-        order by p.comment_num*3+p.view limit 5;
+        order by p.comment_num*3+p.view desc limit 5;
     </select>
     <select id="getPostByPostId" resultMap="postResult">
         select p.id,p.create_time,p.brief,p.title,p.view,p.comment_num,
         section.id as section_id ,section.title as section_title,
         user.nickname,user.ex ,user.create_time as user_create_time,user.avatar,
+        u1.nickname as collection_nickname,u2.nickname as like_nickname,
+        bbs_partition.id as section_partition_id
+        from post p
+        left join section on section.id=p.section_id
+        left join user on user.id = user_id
+        left join user_collection on p.id = user_collection.post_id
+        left join user u1 on user_collection.user_id=u1.id
+        left join user_like on user_like.post_id=p.id
+        left join user u2 on u2.id = user_like.user_id
+        left join bbs_partition on bbs_partition.id = section.partition_id
+        where p.id=#{id}
+    </select>
+    <delete id="deletePost">
+        delete from post where post.id=#{id}
+    </delete>
+    <insert id="addPost">
+        insert into post (title,content,user_id,topping,section_id) value (#{title},#{content},#{user.id},#{topping},#{section.id})
+    </insert>
+    <update id="toppingPost">
+        update  post set topping=#{toppingType} where id=#{id}
+    </update>
+    <update id="changeType">
+        update  post set section_id=#{sectionId} where post.id=#{postId}
+    </update>
+    <insert id="praise">
+        insert into user_like(user_id, post_id) value (#{userId},#{postId})
+    </insert>
+    <select id="getPostByAuthId" resultMap="postResult" >
+        select p.id,p.create_time,p.brief,p.title,p.view,p.comment_num,
+        section.id as section_id ,section.title as section_title,
+        user.nickname,user.ex ,user.create_time as user_create_time ,user.avatar,
         u1.nickname as collection_nickname,u2.nickname as like_nickname
         from post p
         left join section on section.id=p.section_id
@@ -75,46 +107,62 @@
         left join user u1 on user_collection.user_id=u1.id
         left join user_like on user_like.post_id=p.id
         left join user u2 on u2.id = user_like.user_id
-        where p.id=#{id}
+        where p.user_id=#{id}
     </select>
-    <delete id="deletePost">
-        delete from post where post.id=#{id}
-    </delete>
-    <insert id="addPost">
-        insert into post (title,content,user_id,topping,create_time,section_id) value (#{title},#{content},#{user.id},#{type},#{topping},#{create_time},#{section.id})
-    </insert>
-    <update id="toppingPost">
-        update  post set topping=1 where id=#{id}
-    </update>
-    <update id="changeType">
-        update  post set section_id=#{sectionId} where post.id=#{postId}
-    </update>
-    <insert id="praise">
-        insert into user_like(user_id, post_id) value (#{userId},#{postId})
-    </insert>
-    <select id="getPostByAuthId">
-        select id,title,brief,post.create_time,user.nickname,view,praise,type,comment_num from post left join  user on user.id=post.user_id where user_id=#{id}
-    </select>
-    <select id="getCollectionCnt">
-        select count (user_id) from user_collection group by post_id having post_id=#{postId}
+    <select id="getCollectionCnt" resultType="int" >
+        select count(user_id) from user_collection group by post_id having post_id=#{postId}
     </select>
     <insert id="collect">
         insert into user_collection (user_id, post_id) value (#{userId},#{postId})
     </insert>
-    <select id="getPraiseCnt">
+    <select id="getPraiseCnt" resultType="int">
         select count(user_id) from user_like group by post_id having post_id=#{id};
     </select>
     <insert id="Report">
         insert into user_report (user_id, post_id, reason) values (#{userId},#{postId},#{reason});
     </insert>
     <select id="getTopPostBySection">
-        select top 5 p.id,p.create_time,p.brief,p.title,p.view from post p  where p.section_id=#{sectionId} order by p.create_time desc ;
+        select select p.id,p.create_time,p.brief,p.title,p.view,p.comment_num,
+        section.id as section_id ,section.title as section_title,
+        user.nickname,user.ex ,user.create_time as user_create_time ,user.avatar,
+        u1.nickname as collection_nickname,u2.nickname as like_nickname
+        from post p
+        left join section on section.id=p.section_id
+        left join user on user.id = user_id
+        left join user_collection on p.id = user_collection.post_id
+        left join user u1 on user_collection.user_id=u1.id
+        left join user_like on user_like.post_id=p.id
+        left join user u2 on u2.id = user_like.user_id
+        where p.topping ==1 and p.section_id =#{sectionId}
     </select>
-    <select id="getBrief">
+    <select id="getBrief" resultType="string">
         select brief from post where post.id=id;
     </select>
-    <select id="incview">
-      update post set view =view+1  whereid =#{id} ;
+    <select id="incView">
+      update post set view =view+1  where id =#{id} ;
     </select>
+    <select id="getToppingPost" resultMap="postResult">
+        select p.id,p.create_time,p.brief,p.title,p.view,p.comment_num,
+        section.id as section_id ,section.title as section_title,
+        user.nickname,user.ex ,user.create_time as user_create_time ,user.avatar,
+        u1.nickname as collection_nickname,u2.nickname as like_nickname
+        from post p
+        left join section on section.id=p.section_id
+        left join user on user.id = user_id
+        left join user_collection on p.id = user_collection.post_id
+        left join user u1 on user_collection.user_id=u1.id
+        left join user_like on user_like.post_id=p.id
+        left join user u2 on u2.id = user_like.user_id
+        where p.topping =2
+    </select>
+    <select id="getUserIdByPostId" resultType="Integer">
+        select user_id from post where post.id=#{postId}
+    </select>
+    <delete id="cancelCollection">
+        delete from user_collection where user_id=#{userId} and post_id=#{postId}
+    </delete>
+    <delete id="cancelPraise">
+        delete from user_like where user_id =#{userId} and post_id=#{postId}
+    </delete>
 
 </mapper>

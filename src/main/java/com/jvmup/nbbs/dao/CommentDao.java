@@ -5,6 +5,8 @@ import com.jvmup.nbbs.po.Comment;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
+
 /**
  * ProjectName: NBBS
  *
@@ -61,4 +63,6 @@ public interface CommentDao {
      * @param userId
      */
     List<Comment> getAllCommentByUserId(int userId);
+
+    Map <String,Integer>getCommentById(int id);
 }

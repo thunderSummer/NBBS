@@ -18,10 +18,10 @@
     这是SpringMVC为@Controllers分发请求所必需的，并提供了数据绑定支持、@NumberFormatannotation支持、 @DateTimeFormat支持、@Valid支持、读写XML的支持和读写JSON的支持等功能。 -->
     <mvc:annotation-driven/>
     <mvc:interceptors>
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/**/static/editor/lib/**"/>-->
-            <!--<bean class="com.jvmup.nbbs.interceptor.HandlerEditorMdInterceptor"/>-->
-        <!--</mvc:interceptor>-->
+        <mvc:interceptor>
+            <mvc:mapping path="/**/static/editor/lib/**"/>
+            <bean class="com.jvmup.nbbs.interceptor.HandlerEditorMdInterceptor"/>
+        </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
             <bean class="com.jvmup.nbbs.interceptor.StaticHtmlCheckInterceptor"/>

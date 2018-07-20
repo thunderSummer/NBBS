@@ -1,5 +1,6 @@
 package com.jvmup.nbbs.service;
 
+import com.jvmup.nbbs.exception.DataInValidException;
 import com.jvmup.nbbs.po.Comment;
 import com.jvmup.nbbs.po.Post;
 import org.apache.ibatis.annotations.Param;
@@ -31,8 +32,8 @@ public class CommentServiceTest extends AbstractTestNGSpringContextTests{
 
 
     @Test
-    public void testDeleteCommentById() {
-       commentService.deleteCommentById(10);
+    public void testDeleteCommentById() throws DataInValidException {
+       commentService.deleteCommentById(1,4);
     }
 
     @Test

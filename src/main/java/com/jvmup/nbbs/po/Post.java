@@ -1,5 +1,6 @@
 package com.jvmup.nbbs.po;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import org.apache.ibatis.type.Alias;
 
@@ -22,7 +23,9 @@ public class Post extends BasePo {
     private String content;
     private int type;
     private int topping;
+    @JsonFormat(pattern = "yyyy-MM-dd-hh-mm")
     private Date createTime;
+    private Date lastModify;
     private int view;
     private Section section;
     private String brief;
@@ -33,6 +36,7 @@ public class Post extends BasePo {
     private List<User> collectionList;
     private int hot;
     private int commentNum;
+
 
     public void setSection(Section section) {
         this.section = section;
@@ -53,11 +57,11 @@ public class Post extends BasePo {
     public void setBrief(String brief) {
         this.brief = brief;
     }
-
+    @JsonFormat(pattern = "yyyy-MM-dd-hh-mm")
     public Date getCreateTime() {
         return createTime;
     }
-
+    @JsonFormat(pattern = "yyyy-MM-dd-hh-mm")
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
@@ -174,4 +178,12 @@ public class Post extends BasePo {
         this.collectionList = collectionList;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd-hh-mm")
+    public Date getLastModify() {
+        return lastModify;
+    }
+    @JsonFormat(pattern = "yyyy-MM-dd-hh-mm")
+    public void setLastModify(Date lastModify) {
+        this.lastModify = lastModify;
+    }
 }
