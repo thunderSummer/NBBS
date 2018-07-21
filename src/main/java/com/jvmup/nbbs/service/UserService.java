@@ -163,4 +163,8 @@ public class UserService {
         return userDao.isAdmin(userId)==1;
     }
 
+    public List<User> getAllUserId(){
+        return userDao.getAllUserId();
+    }
+
 }

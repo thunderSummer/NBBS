@@ -1,0 +1,99 @@
+body{
+    background-color: #f5f7f9;
+}
+.manager-content {
+    margin: auto;
+    padding-top: 70px;
+    text-align: center;
+}
+li{
+    list-style: none;
+    padding: 25px 50px 35px 10px;
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+}
+.manager-nav li:hover{
+    background-color: #eee;
+    cursor: pointer;
+}
+ul{
+    margin: 0;
+    padding-left: 0;
+}
+.manager-nav {
+    width: 180px;
+    position: relative;
+    vertical-align: top;
+    margin-right: 20px;
+    background-color: #fff;
+    margin-left: auto;
+    display: inline-block;
+}
+
+li.nav-active:after{
+    content: " ";
+    position: absolute;
+    margin-top: 9px;
+    right: 15px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #bbb;
+}
+
+.even{
+    background-color: #eee;
+}
+td{
+    color: #333;
+}
+td,th{
+    text-align: left;
+    color: #333;
+
+}
+table{
+    border-collapse:collapse;
+    width: 100%;
+}
+table, td, th
+{
+    padding: 10px;
+    border:1px #ddd solid;
+}
+.manager-info{
+    width: 1108px;
+    vertical-align: top;
+    min-height: 600px;
+    background-color: #fff;
+    display: inline-block;
+}
+.part-info{
+
+}
+.article-title {
+}
+#input-partition{
+    margin-top: 60px;
+    width: 200px;
+    height: 30px;
+}
+#submit-partition{
+    margin: 20px auto;
+    padding: 10px 20px;
+    width: 60px;
+
+}
+.partition-wrapper{
+    text-align: center;
+}
+#submit-partition:hover{
+    background: #eee;
+    cursor: pointer;
+}
+#input-partition-update{
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+}

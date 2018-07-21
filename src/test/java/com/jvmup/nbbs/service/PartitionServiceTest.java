@@ -50,4 +50,9 @@ public class PartitionServiceTest extends AbstractTestNGSpringContextTests {
         partition.setTitle("本部风采啊");
         partitionService.updatePartition(partition);
     }
+
+    @Test
+    public void testAddPartitionOwner() {
+        partitionService.addPartitionOwner(2,2);
+    }
 }

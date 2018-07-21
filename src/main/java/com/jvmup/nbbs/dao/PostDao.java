@@ -121,4 +121,8 @@ public interface PostDao {
     void cancelCollection(@Param("postId") int postId, @Param("userId") int userId);
 
     void cancelPraise(@Param("postId") int postId, @Param("userId") int userId);
+    List<Post> getAllPost();
+
+    void changePostType(@Param("id")int id,@Param("type")int type);
+
 }

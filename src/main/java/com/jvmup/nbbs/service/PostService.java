@@ -260,6 +260,9 @@ public class PostService {
     public void cancelCollection(int userId,int postId){
         postDao.cancelCollection(postId,userId);
     }
+    public List<Post> getAllPost(){
+        return postDao.getAllPost();
+    }
 }
 
 

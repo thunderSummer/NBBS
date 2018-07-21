@@ -32,7 +32,7 @@ import java.util.Map;
  * Created by xxl on - 2018-07-16 11:32
  **/
 @RestController
-public class UserController {
+public class UserController extends BaseController{
     private UserService userService;
     @Autowired
     public void setUserService(UserService userService) {
@@ -46,16 +46,15 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/user/register", method = RequestMethod.POST)
-    public ResponseStyle registerUser(@Valid @RequestBody Param param, HttpServletRequest request){
+    public ResponseStyle registerUser(@RequestBody Param param, HttpServletRequest request){
         HttpSession session = request.getSession();
         String result = (String) session.getAttribute(StringUtil.vCode);
+//        if (result==null||result.equals(""))
+//            return new ResponseStyle().failure("用户信息获取失败");
         if (param.vCode.equals(result.split("#")[0])){
-            if(TimeUtil.cmpTime(result.split("#")[1])){
                 userService.register(param.user);
                 session.setAttribute(StringUtil.loginStatus,param.user);
                 return new ResponseStyle().success();
-            }
-            return new ResponseStyle().failure("验证码时间过期");
         }
         return new ResponseStyle().failure("验证码错误");
     }

@@ -1,7 +1,7 @@
 package com.jvmup.nbbs.dao;
 
 import com.jvmup.nbbs.po.Partition;
-import io.lettuce.core.dynamic.annotation.Param;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -19,4 +19,8 @@ public interface PartitionDao {
 
     void deletePartition(Partition partition);
 
+    void removePartitionOwner(@Param("userId") int userId,@Param("partitionId") int partitionId);
+
+
+    void addPartitionOwner(@Param("userId") int userId, @Param("partitionId") int partitionId);
 }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NBBS论坛管理界面</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/manage.css"/>
+    <script src="/static/script/jquery-3.3.1.js"></script>
+    <script src="/static/script/manage.js"></script>
+</head>
+<body>
+<header>
+    <div>
+        <p>欢迎你，<i class="admin-name">管理员名字</i></p>
+        <div>注销</div>
+    </div>
+    <div class="manager-content">
+        <div class="manager-nav">
+            <ul>
+                <li class="user nav-active" onclick="getUserInfo()">
+                    <i class="fa fa-fw fa-user"></i>
+                    用户管理
+                </li>
+                <li class="post" onclick="getPostInfo()">
+                    <i class="fa fa-fw fa-tasks"></i>
+                    帖子管理
+                </li>
+                <li class="partition" onclick="getPartitionInfo()">
+                    <i class="fa fa-fw fa-th"></i>
+                    分区管理
+                </li>
+                <li class="section" onclick="getSectionInfo()">
+                    <i class="fa fa-fw fa-tag"></i>
+                    版块管理
+                </li>
+            </ul>
+        </div>
+        <section class="manager-info" onclick="">
+            <table class="user-manage part-info">
+            </table>
+            <table class="section-manage part-info" >
+
+            </table>
+            <table class="post-manage part-info">
+                <tr class="post-header">
+                    <th>
+                        帖子ID
+                    </th>
+                    <th>
+                        帖子标题
+                    </th>
+                    <th>
+                        用户
+                    </th>
+                    <th>
+                        帖子类型
+                    </th>
+                    <th>
+                        置顶类型
+                    </th>
+                    <th>
+                        删除
+                    </th>
+                </tr>
+                <tr class="post-row">
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <select class="select-post-type" id="select-post-type-id">
+
+                        </select>
+                        <i class="fa fa-fw fa-check" id="i-post-type-id" style="float: right"></i>
+                    </td>
+                    <td>
+                        <select class="select-post-top" id="select-post-top-id">
+
+                        </select>
+                        <i class="fa fa-fw fa-check" id="i-post-top-id" style="float: right"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-fw fa-times" id="i-post-delete-id" style="float: right">
+
+                        </i>
+                    </td>
+                </tr>
+            </table>
+            <div class="partition-wrapper part-info">
+                <table class="partition-manage">
+                </table>
+                <input id="input-partition">
+                <div id="submit-partition" onclick="addPartition()">添加<i class=" fa fa-fw fa-plus" ></i></div>
+            </div>
+
+        </section>
+
+    </div>
+</header>
+</body>
+</html>

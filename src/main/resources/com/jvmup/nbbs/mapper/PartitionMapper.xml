@@ -63,4 +63,10 @@
         <!--delete from admin_section where section_id in (select id from section where partition_id=#{id})-->
         <!--delete from user_collection where post_id in(select id from post where section_id in ())-->
     <!--</delete>-->
+    <insert id="addPartitionOwner">
+        insert into admin_partition (user_id, partition_id) values (#{userId},#{partitionId});
+    </insert>
+    <delete id="removePartitionOwner">
+        delete from admin_partition where partition_id=#{partitionId} and user_id=#{userId}
+    </delete>
 </mapper>

@@ -68,6 +68,14 @@ public class SectionService {
         return sectionDao.getSectionByPartitionId(partitionId);
     }
 
+    public void addSectionOwner(int userId,int sectionId){
+        sectionDao.addSectionOwner(userId,sectionId);
+    }
+
+    public void removeSectionOwner(int userId,int sectionId){
+        sectionDao.removeSectionOwner(userId,sectionId);
+    }
+
 
 }
 

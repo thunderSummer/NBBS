@@ -42,4 +42,11 @@ public class PartitionService {
     public void addPartition(Partition partition){
         partitionDao.addPartition(partition);
     }
+    public void addPartitionOwner(int userId,int partitionId){
+        partitionDao.addPartitionOwner(userId,partitionId);
+    }
+    public void removePartitionOwner(int userId,int partitionId){
+        partitionDao.removePartitionOwner(userId,partitionId);
+    }
+
 }

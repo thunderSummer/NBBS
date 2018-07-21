@@ -26,4 +26,8 @@ public interface SectionDao {
     List<Section> getSectionByPartitionId(int partitionId);
 
     int permission(@Param("userId")int userId,@Param("sectionId") int sectionId);
+
+    void removeSectionOwner(@Param("userId") int userId,@Param("sectionId") int sectionId);
+    void addSectionOwner(@Param("userId") int userId,@Param("sectionId") int sectionId);
+
 }

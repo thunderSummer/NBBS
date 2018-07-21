@@ -130,4 +130,7 @@
     <select id="getIdByCommentId" resultType="Integer">
         select user_id from  comment where id=#{commentId}
     </select>
+    <select id="getAllUserId" resultType="user">
+        select id,nickname from user;
+    </select>
 </mapper>

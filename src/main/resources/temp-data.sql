@@ -67,10 +67,10 @@ insert into post(title, content, user_id, type, topping, view, create_time, sect
 insert into post(title, content, user_id, type, topping, view, create_time, section_id, last_modify, brief) VALUES ('这是第4个帖子题目','这是第4个帖子的内容',4,1,0,4,now(),3,now(),'这是第4个简介');
 insert into post(title, content, user_id, type, topping, view, create_time, section_id, last_modify, brief) VALUES ('这是第5个帖子题目','这是第5个帖子的内容',5,1,0,5,now(),1,now(),'这是第5个简介');
 insert into post(title, content, user_id, type, topping, view, create_time, section_id, last_modify, brief) VALUES ('这是第6个帖子题目','这是第6个帖子的内容',6,1,1,1,now(),5,now(),'这是第6个简介');
-insert into post(title, content, user_id, type, topping, view,create_time,  section_id, last_modify, brief) VALUES ('这是第7个帖子题目','这是第7个帖子的内容',7,0,0,2,now(),1,now(),'这是第7个简介');
-insert into post(title, content, user_id, type, topping, view,create_time,  section_id, last_modify, brief) VALUES ('这是第8个帖子题目','这是第8个帖子的内容',7,2,0,4,now(),3,now(),'这是第8个简介');
-insert into post(title, content, user_id, type, topping, view,create_time,  section_id, last_modify, brief) VALUES ('这是第9个帖子题目','这是第9个帖子的内容',5,0,0,2,now(),5,now(),'这是第9个简介');
-insert into post(title, content, user_id, type, topping, view,create_time,  section_id, last_modify, brief) VALUES ('这是第10个帖子题目','这是第10个帖子的内容',6,1,0,1,now(),1,now(),'这是第10个简介');
+insert into post(title, content, user_id, type, topping, view, create_time,  section_id, last_modify, brief) VALUES ('这是第7个帖子题目','这是第7个帖子的内容',7,0,0,2,now(),1,now(),'这是第7个简介');
+insert into post(title, content, user_id, type, topping, view, create_time,  section_id, last_modify, brief) VALUES ('这是第8个帖子题目','这是第8个帖子的内容',7,2,0,4,now(),3,now(),'这是第8个简介');
+insert into post(title, content, user_id, type, topping, view, create_time,  section_id, last_modify, brief) VALUES ('这是第9个帖子题目','这是第9个帖子的内容',5,0,0,2,now(),5,now(),'这是第9个简介');
+insert into post(title, content, user_id, type, topping, view, create_time,  section_id, last_modify, brief) VALUES ('这是第10个帖子题目','这是第10个帖子的内容',6,1,0,1,now(),1,now(),'这是第10个简介');
 insert into post(title, content, user_id, type, topping, view,create_time,  section_id, last_modify, brief) VALUES ('这是第11个帖子题目','这是第11个帖子的内容',3,1,0,2,now(),1,now(),'这是第11个简介');
 insert into post(title, content, user_id, type, topping, view,create_time,  section_id, last_modify, brief) VALUES ('这是第12个帖子题目','这是第12个帖子的内容',1,1,0,3,now(),3,now(),'这是第12个简介');
 insert into post(title, content, user_id, type, topping, view,create_time,  section_id, last_modify, brief) VALUES ('这是第13个帖子题目','这是第14个帖子的内容',2,1,0,1,now(),1,now(),'这是第13个简介');

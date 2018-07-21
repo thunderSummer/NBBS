@@ -335,7 +335,7 @@ insert into comment (id,content, post_id, comment_id, user_id) values (73,"为�
 insert into comment (id,content, post_id, comment_id, user_id) values (74,"为子彭打call啊啊啊啊啊啊啊啊！",45,null ,45,now());
 insert into comment (id,content, post_id, comment_id, user_id) values (75,"为子彭打call啊啊啊啊啊啊啊啊！",46,null ,31,now());
 
-insert into comment (id,content, post_id, comment_id, user_id) values (76,"为子彭打call啊啊啊啊啊啊啊啊！",32,31 ,null ,now());
+insert into comment (id,content, post_id, comment_id, user_id,time) values (76,"为子彭打call啊啊啊啊啊啊啊啊！",32,31 ,null ,now());
 insert into comment (id,content, post_id, comment_id, user_id) values (77,"为子彭打call啊啊啊啊啊啊啊啊！",33,32 ,null,now());
 insert into comment (id,content, post_id, comment_id, user_id) values (78,"为子彭打call啊啊啊啊啊啊啊啊！",34,33,null,now());
 insert into comment (id,content, post_id, comment_id, user_id) values (79,"为子彭打call啊啊啊啊啊啊啊啊！",35,34,null,now());

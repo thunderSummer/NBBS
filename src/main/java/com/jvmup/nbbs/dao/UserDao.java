@@ -80,4 +80,6 @@ public interface UserDao {
 
     Integer getIdByCommentId(int commentId);
 
+    List<User> getAllUserId();
+
 }

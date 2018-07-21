@@ -10,6 +10,8 @@
         <result column="title" property="title"/>
         <result column="view" property="view"/>
         <result column="comment_num" property="commentNum"/>
+        <result column="type" property="type"/>
+        <result column="topping" property="topping"/>
         <association property="section" javaType="section">
             <id column="section_id" property="id"/>
             <result column="section_title" property="title"/>
@@ -164,5 +166,21 @@
     <delete id="cancelPraise">
         delete from user_like where user_id =#{userId} and post_id=#{postId}
     </delete>
+    <select id="getAllPost" resultMap="postResult">
+        select p.id,p.create_time,p.brief,p.title,p.view,p.comment_num,p.type,p.topping,
+        section.id as section_id ,section.title as section_title,
+        user.nickname,user.ex ,user.create_time as user_create_time ,user.avatar,
+        u1.nickname as collection_nickname,u2.nickname as like_nickname
+        from post p
+        left join section on section.id=p.section_id
+        left join user on user.id = user_id
+        left join user_collection on p.id = user_collection.post_id
+        left join user u1 on user_collection.user_id=u1.id
+        left join user_like on user_like.post_id=p.id
+        left join user u2 on u2.id = user_like.user_id
+    </select>
+    <update id="changePostType">
+        update post set type = #{type} where id =#{id};
+    </update>
 
 </mapper>
