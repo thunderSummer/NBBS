@@ -69,6 +69,7 @@ public class CommentController {
     public ResponseStyle addComment(@PathVariable Comment comment,HttpServletRequest request){
         User user = (User) request.getSession().getAttribute(StringUtil.loginStatus);
         comment.setUser(user);
+        comment.setContent(replace(user.getNickname(),comment.getContent()));
         commentService.addComment(comment);
         return new ResponseStyle().success();
     }
@@ -79,6 +80,14 @@ public class CommentController {
         if (id==0)
             return new ResponseStyle().success().failure("查无此人");
         return new ResponseStyle().success(commentService.getCommentById(id));
+    }
+    private String replace(String nickname,String content){
+        List<String> strings = userService.getMaskWord(nickname);
+        String res = content;
+        for (String s:strings){
+            res = res.replace(s,"***");
+        }
+        return res;
     }
 
 }

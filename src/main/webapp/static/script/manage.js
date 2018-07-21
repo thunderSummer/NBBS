@@ -31,7 +31,7 @@ function getPostInfo() {
     $(".post").addClass("nav-active");
     $(".part-info").hide();
     $(".post-manage").show();
-    loadPostInfo();
+    load();
 
 }
 
@@ -134,13 +134,81 @@ function loadUserInfo() {
 
 }
 
-function loadPostInfo() {
-    sendAjax('/allPost', 'get', function (res) {
-        if (res.meta.success === true) {
+// function loadPostInfo() {
+//     sendAjax('/allPost','get','',function (res) {
+//         if (res.meta.success === true) {
+//             $('.post-manage').empty();
+//             $('.post-manage').append(
+//                 `
+//                     <tr class="post-header">
+//                     <th>
+//                         帖子ID
+//                     </th>
+//                     <th>
+//                         帖子标题
+//                     </th>
+//                     <th>
+//                         用户
+//                     </th>
+//                     <th>
+//                         帖子类型
+//                     </th>
+//                     <th>
+//                         置顶类型
+//                     </th>
+//                     <th>
+//                         删除
+//                     </th>
+//                 </tr>
+//             `);
+//             $.each(res.data, function (i, item) {
+//                     $('.post-manage').append(`
+//                     <tr class="post-row">
+//                     <td>
+//                     ${item.id}
+//                     </td>
+//                     <td>
+//                     ${item.title}
+//                     </td>
+//                     <td>
+//                     ${item.user.nickname}
+//                     </td>
+//                     <td>
+//                         <select class="select-post-type" id="select-post-type-${item.id}">
+//                             <option value="0">封禁</option>
+//                             <option value="1">正常</option>
+//                             <option value="2">精华</option>
+//                             </select>
+//                         <i class="fa fa-fw fa-check" id="i-post-type-${item.id}" style="float: right" onclick="changeType(this)"></i>
+//                     </td>
+//                     <td>
+//                         <select class="select-post-top" id="select-post-top-${item.id}">
+//                             <option value="0">正常</option>
+//                             <option value="1">版块置顶</option>
+//                             <option value="2">全论坛置顶</option>
+//                         </select>
+//                         <i class="fa fa-fw fa-check" id="i-post-top-${item.id}" style="float: right" onclick="changeTopping(this)"></i>
+//                     </td>
+//                     <td>
+//                         <i class="fa fa-fw fa-times" id="i-post-delete-${item.id}" style="float: right" onclick="deletePost(this)">
+//                         </i>
+//                     </td>
+//                 </tr>
+//                 `);
+//                     $("#select-post-type-${item.id}").val(${item.type});
+//                     $("#select-post-top-${item.id}").val(${item.topping});
+//         })
+//         }
+//
+//         });
+// }
+function load() {
+    sendAjax('/admin/allPost','get','',function (res) {
+        if (res.meta.success===true){
             $('.post-manage').empty();
             $('.post-manage').append(
                 `
-                    <tr class="post-header">
+               <tr class="post-header">
                     <th>
                         帖子ID
                     </th>
@@ -160,9 +228,9 @@ function loadPostInfo() {
                         删除
                     </th>
                 </tr>
-            `
-            );
-            $.each(res.data, function (i, item) {
+                `
+            )
+            $.each(res.data,function (i,item) {
                 $('.post-manage').append(`
                     <tr class="post-row">
                     <td>
@@ -180,7 +248,7 @@ function loadPostInfo() {
                             <option value="1">正常</option>
                             <option value="2">精华</option>
                             </select>
-                        <i class="fa fa-fw fa-check" id="i-post-type-${item.id}" style="float: right"></i>
+                        <i class="fa fa-fw fa-check" id="i-post-type-${item.id}" style="float: right" onclick="changeType(this)"></i>
                     </td>
                     <td>
                         <select class="select-post-top" id="select-post-top-${item.id}">
@@ -191,40 +259,51 @@ function loadPostInfo() {
                         <i class="fa fa-fw fa-check" id="i-post-top-${item.id}" style="float: right" onclick="changeTopping(this)"></i>
                     </td>
                     <td>
-                        <i class="fa fa-fw fa-times" id="i-post-delete-${item.id}" style="float: right">
+                        <i class="fa fa-fw fa-times" id="i-post-delete-${item.id}" style="float: right" onclick="deletePost(this)">
                         </i>
                     </td>
                 </tr>
                 `);
-                    $("#select-post-type-${item.id}").val(${item.type});
-                    $("#select-post-top-${item.id}").val(${item.topping});
-            }
-            );
-        }
+                let type = item.type;
+                $(`#select-post-type-${item.id}`).val(type);
+                $(`#select-post-top-${item.id}`).val(item.topping);
 
+            })
+        }
     })
 }
 function changeType(obj){
     let id = $(obj).attr("id").split('-')[3];
     let type = $(`.select-post-type-${id}`).val();
     let data ={
-        "id":id,
+        "postId":id,
         "type":type
     };
     sendAjax('/admin/post/type','put',JSON.stringify(data),function (res) {
         alert("帖子类型更改成功")
     })
 }
-function changeTopping() {
+function changeTopping(obj) {
     let id = $(obj).attr("id").split('-')[3];
     let type = $(`.select-post-top-${id}`).val();
     let data ={
-        "id":id,
+        "postId":id,
         "topping":type
     };
     sendAjax('/admin/post/top','put',JSON.stringify(data),function (res) {
         alert("帖子类型更改成功")
     })
+}
+function deletePost(obj) {
+    let id=$(obj).attr("id").split('-')[3];
+    let data={
+        "postId":id
+    };
+    sendAjax('/admin/post','delete',JSON.stringify(data),function () {
+        alert('帖子删除成功');
+        getPostInfo();
+    })
+
 }
 function loadPartitionInfo() {
     sendAjax('/allPartition', 'get', '', function (res) {

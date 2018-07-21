@@ -82,4 +82,6 @@ public interface UserDao {
 
     List<User> getAllUserId();
 
+    List<String> getAllWord();
+
 }

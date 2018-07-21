@@ -133,4 +133,7 @@
     <select id="getAllUserId" resultType="user">
         select id,nickname from user;
     </select>
+    <select id="getAllWord" resultType="string">
+        select * from mask_word
+    </select>
 </mapper>

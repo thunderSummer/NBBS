@@ -51,7 +51,7 @@ public interface PostDao {
      * 置顶post
      * @param id
      */
-    void toppingPost(int id,int toppingType);
+    void toppingPost(@Param("id") int id,@Param("toppingType") int toppingType);
 
     /**
      * gzp 717 1201
@@ -124,5 +124,8 @@ public interface PostDao {
     List<Post> getAllPost();
 
     void changePostType(@Param("id")int id,@Param("type")int type);
+
+
+    List<Post> getPostByContent(PageParam pageParam, @Param("content") String content, @Param("type") int type);
 
 }

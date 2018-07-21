@@ -110,4 +110,9 @@ public class PostServiceTest extends AbstractTestNGSpringContextTests {
     @Test
     public void testGetToppingPost() {
     }
+
+    @Test
+    public void testSearchPost() {
+        postService.searchPost("用户",1,1);
+    }
 }

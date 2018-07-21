@@ -263,6 +263,13 @@ public class PostService {
     public List<Post> getAllPost(){
         return postDao.getAllPost();
     }
+
+    public List<Post> searchPost(String content,int type,int page){
+        PageParam pageParam =new PageParam();
+        pageParam.setDefaultPageSize(5);
+        pageParam.setDefaultPage(page);
+        return postDao.getPostByContent(pageParam,content,type);
+    }
 }
 
 

@@ -1,5 +1,7 @@
 package com.jvmup.nbbs.po;
 
+import javafx.geometry.Pos;
+
 /**
  * ProjectName: NBBS
  *

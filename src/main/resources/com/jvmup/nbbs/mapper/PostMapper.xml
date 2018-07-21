@@ -182,5 +182,14 @@
     <update id="changePostType">
         update post set type = #{type} where id =#{id};
     </update>
+    <select id="getPostByContent" resultMap="postResult">
+        select p.id,p.create_time,p.brief,p.title,p.view,p.comment_num,p.type,p.topping,
+        section.id as section_id ,section.title as section_title,
+        user.nickname,user.ex ,user.create_time as user_create_time ,user.avatar
+        from post p
+        left join section on section.id=p.section_id
+        left join user on user.id = user_id
+        where p.title like  concat('%',#{content},'%') or user.nickname like  concat('%',#{content},'%') or p.content like  concat('%',#{content},'%')
+    </select>
 
 </mapper>

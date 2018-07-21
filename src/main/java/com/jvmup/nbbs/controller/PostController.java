@@ -21,6 +21,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.constraints.Past;
+import java.util.List;
 
 /**
  * ProjectName: NBBS
@@ -193,6 +194,25 @@ public class PostController {
             this.reason = reason;
         }
 
+    }
+
+    @RequestMapping(value = "/search/{content}/{type}/{page}",method = RequestMethod.GET)
+    public ResponseStyle searchPost(HttpServletRequest request,@PathVariable String content,@PathVariable(required = false) int type,@PathVariable(required = false)int page){
+        if (page==0){
+            page=1;
+        }
+        if (type==0){
+            type=1;
+        }
+        return new ResponseStyle().success(postService.searchPost(content,type,page));
+    }
+    private String repace(String nickname,String content){
+        List<String> strings = userService.getMaskWord(nickname);
+        String res = content;
+        for (String s:strings){
+            res = res.replace(s,"***");
+        }
+        return res;
     }
 
 
