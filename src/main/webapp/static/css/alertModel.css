@@ -1,0 +1,128 @@
+html{
+	font-size: 62.5%;
+}
+/*alert模态框
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————*/
+#model-alertInfo,#model-alertInfo_0{
+	display: none;
+	position: fixed;
+	z-index: 6000;
+	background-color: rgba(0,0,0,0.7);
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+.model-alertInfo .model-container{
+	position: absolute;
+	top: 29%;/*40*/
+	opacity: 0.2;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: white;
+	height: auto;
+	width: 45rem;
+}
+.model-alertInfo .model-container .model-head{
+	background-color: #1E90FF;
+	height: auto;
+	padding: 1.5rem 2rem;
+	position: relative;
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+.model-alertInfo .model-container .model-head span{
+	margin-left: 1rem;
+	color: white;
+}
+.model-alertInfo .model-container .model-head i{
+	font-size: 1.6rem;
+	position: absolute;
+	right: 3rem;
+	top: 50%;
+	transform: translate(0,-50%);
+}
+.model-alertInfo .model-container .model-body{
+	background-color: white;
+	padding: 0.5rem;
+	font-size: 1.6rem;
+	text-align: center;
+}
+.model-alertInfo .model-container .model-body h3.message{
+	vertical-align: middle;
+	text-align: center;
+	color: black;
+	font-size: 1.6rem;
+	margin-top: 10px;
+	font-weight: bold;
+    line-height: 40px;
+    font-weight: 600;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.model-alertInfo .model-container .model-end{
+	border-top: 1px #AAA solid;
+	padding: 1rem;
+	text-align: center;
+}
+.btn{
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	white-space: nowrap;
+	padding: 0.5rem 1rem;
+	font-size: 1.4rem;
+	line-height: 1.42857;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border: solid 1px #969696;
+	border-radius: 4px;
+}
+.model-alertInfo .model-container .model-end .btn{
+	margin: 0 2rem;
+	width: 5rem;
+/* 	background-color: #42c02e;
+	color: white;
+	border: none; */
+}
+.model-alertInfo .model-container .model-end .btn.get,.model-alertInfo .model-container .model-end .btn .clo{
+	background-color: #42c02e;
+/* 	opacity: 0.8; */
+	color: white;
+	border:none;
+}
+
+
+/*页脚
+--------------------------------------------------------------------*/
+footer {
+    position: relative;
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    background-color: rgba(39,68,114,1);
+}
+footer {
+    padding: 1.5em 0;
+}
+footer p {
+    margin: 0;
+    color: #999;
+}
+hr {
+    background: #EEE;
+    border: 0;
+    height: 1px;
+    margin: 20px 0 20px;
+    display: inline-block;
+}

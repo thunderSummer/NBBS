@@ -1,0 +1,350 @@
+header{
+	display: block;
+}
+html{
+	font-size: 62.5%;
+	font-family: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+	padding: 0;
+}
+body{
+/* 	background: url("../images/22.jpg"); */
+	background-size: cover;
+	overflow-x: hidden;
+	background-color: #f0f0f0;
+	/*background-repeat: no-repeat;*/
+	margin: 0;
+	padding: 0;
+}
+header.sign-up-header{
+	font-size: 5rem;
+	width: 100%;
+	height: auto;
+	line-height: 10rem;
+	color: #436EEE;
+}
+
+header.sign-up-header a{
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: #696969;
+	position: relative;
+	float: right;
+	margin-right: 6rem;
+}
+header.sign-up-header a:hover{
+	text-decoration: underline;
+}
+#sign-up-container.sign-up-container,
+.sign-in{
+	position: relative;
+	transform: translate(-50%,0);
+	top: 40%;
+	left: 50%;
+	background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0,0,0,.3);
+  vertical-align: middle;
+	width: 50rem;
+	height: 42rem;
+	border-radius: 1rem;
+	min-width:30rem;
+	margin-top: 5%;
+	z-index: 100;
+}
+.sign-in{
+	height: 30rem;
+}
+div#sign-up-title,
+div.sign-in-title{
+	text-align: center;
+	width: 100%;
+	font-size: 2rem;
+	position: relative;
+	top: 5%;
+	color: #ea6f5a;
+	font-weight: 600;
+	font-size: 2.1rem;
+}
+.sign-up input，
+.sign-in input{
+	outline:none;
+	background: rgba(256,256,256,0.4);
+	margin-bottom: 0;
+  	padding: 2px 1rem 2px 1rem;
+  	border: 1px solid #c8c8c8;
+	border-radius: 4px 4px 0 0;
+	background-color: hsla(0,0%,71%,.1);
+  	vertical-align: middle;
+	/*border-bottom: solid black 1px;*/
+}
+.sign-up select{
+	outline:none;
+	background: rgba(256,256,256,0.4);
+	margin-bottom: 0;
+  	padding: 2px 1rem 2px 1rem;
+  	border: 1px solid #c8c8c8;
+	border-radius: 4px 4px 0 0;
+	background-color: hsla(0,0%,71%,.1);
+  	vertical-align: middle;
+  	margin-bottom: 2rem;
+	/*border-bottom: solid black 1px;*/
+}
+::-moz-focus-inner{border:0px;}   /*去除按钮点击时出现的虚线边框*/
+#sign-up-container.sign-up-container form,
+.sign-in form{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top: 55%;
+	left: 50%;
+}
+#sign-up-container.sign-up-container form span.must{
+	width: auto;
+	color: red;
+}
+form.sign-up .sign-up-name,
+form.sign-up .sign-up-password,
+form.sign-up .sign-up-mail,
+form.sign-up .check-psw,
+form.sign-up .sign-up-inv,
+form.sign-up .project,
+form.sign-up .sign-up-verif{
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	position: relative;
+	text-align: center;
+	left: -2%;
+}
+form.sign-up .sign-up-name > span,
+form.sign-up .sign-up-password > span,
+form.sign-up .sign-up-mail > span,
+form.sign-up .check-psw > span, 
+form.sign-up .sign-up-inv > span, 
+form.sign-up .project > span,
+form.sign-up .sign-up-verif > span{
+	width: 10rem;
+	font-size: 1.6rem;
+	font-weight: 600;
+	overflow: hidden;
+	color: black;
+	display: inline-block;
+	vertical-align: middle;
+/* 	height: 2rem; */
+	text-align: right;
+}
+form.sign-up input{
+	height: 3rem;
+	width: 24rem;
+	line-height: 3rem;
+	border-radius: /*0.5rem 0.5rem 0 0;*/0.5rem;
+}
+form.sign-up select{
+	height: 3.5rem;
+	width: 26.1rem;
+	line-height: 3rem;
+	border-radius: /*0.5rem 0.5rem 0 0;*/0.5rem;
+}
+form.sign-up .project i,form.sign-up .project span{
+	margin-bottom: 2rem;
+}
+form.sign-up .buttons{
+	text-align: center;
+}
+form.sign-up input#sign-up-btn{
+	width: 10rem;
+	position: relative;
+	/*! left: 27%; */
+/* 	transform: translate(-50%,0); */
+	background-color: #42c02e;
+	opacity: 0.8;
+	border-radius: 1rem;
+	font-weight: bold;
+	font-size: 1.6rem;
+	height: 3.5rem;
+	margin-top: 0.5rem;
+	margin-left: 3.5rem;
+	color: white;
+	border: 1px solid #42c02e;
+}
+form.sign-up i.check{
+	position: relative;
+	font-size: 1.5rem;
+	width: 1rem;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+}
+form.sign-up span.hint{
+	opacity: 0;
+	width: 100%;
+	display: inline-block;
+	font-size: 1.4rem;
+	height: 2rem;
+	font-weight: normal;
+	color: #969696;
+	position: relative;
+	left: 58%;
+	transform: translate(-50%,0);
+	text-align: center;
+}
+form.sign-up span.hint i{
+	margin: 0 0.5rem;
+	opacity: 0;
+}
+.btn{
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	white-space: nowrap;
+	padding: 0.6rem 1.2rem;
+	font-size: 1.4rem;
+	line-height: 1.42857;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+form.sign-up .go-back{
+	width: 10rem;
+	display: inline-block;
+	position: relative;
+	/*! left: 30%; */
+	border: 1px solid #969696;
+	background-color: transparent;
+	opacity: 0.8;
+	border-radius: 1rem;
+	font-weight: bold;
+	font-size: 1.6rem;
+	margin-top: 0.5rem;
+	padding-left: 0;
+	margin-left: 2rem;
+	padding-right: 0;
+}
+form.sign-up .go-back a{
+	width: 100%;
+	display: inline-block;
+}
+form.sign-up a{
+	text-decoration: none;
+	color: black;
+}
+form.sign-up .sign-up-verif span.verif-code,
+form.sign-up .sign-up-verif span.refresh{
+	width: 10rem;
+	position: absolute;
+	display: inline-block;
+	text-align: center;
+	right: 7.5rem;
+	height: 3.5rem;
+	background-color: rgba(0,0,0,0.6);
+	vertical-align: middle;
+	line-height: 3.5rem;
+	border-radius: 0 0.5rem 0.5rem 0;
+	color: orange;
+	
+}
+form.sign-up #verification{
+	display: none;
+}
+form.sign-up .sign-up-verif span.refresh{
+	color: white;
+	display: none;
+}
+
+footer{
+	position: absolute;
+	bottom: 0;
+}
+
+.sign-in form  label{
+	margin: 1rem;
+	font-weight: 600;
+	width: 6rem;
+	display: inline-block;
+}
+.sign-in form .body-line{
+	margin: 2rem 0;
+}
+.sign-in form a{
+	color: #969696;
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+	/* float: right; */
+	/* margin-right: 1.25rem; */
+	position: absolute;
+	right: 8rem;
+	line-height: 3rem;
+}
+.sign-in form input{
+	border: #AAA 1px solid;
+	padding: 0.8rem 0.5rem;
+	font-size: 1.5rem;
+	width: 50%;
+	border-radius: 0.5rem;
+	background: #f7f7f7;
+}
+.sign-in form input[type="submit"]{
+	margin: 0 1rem 1rem 1rem;
+	padding: 0.5rem;
+	width: 10rem;
+	border: none;
+	display: inline-block;
+	background-color: #42c02e;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	white-space: nowrap;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	color: white;
+}
+.sign-in form .verif-code,
+.sign-in form .refresh{
+	position: absolute;
+	display: inline-block;
+	width: 10rem;
+	height: 3.6rem;
+	vertical-align: middle;
+	line-height: 3.6rem;
+	top: 3px;
+	background-color: rgba(0,0,0,0.6);
+	border-radius: 0 0.5rem 0.5rem 0;
+	color: white;
+	right: 7.8rem;
+}
+.sign-in form .verif{
+	position: relative;
+	display: none;
+}
+.sign-in form .refresh{
+	display: none;
+}
+.sign-in form{
+	font-size: 1.6rem;
+	text-align: center;
+	color: black;
+}
+.sign-in form i{
+	position: relative;
+}
+.sign-in form i.check{
+	display: inline-block;
+	width: 3rem;
+}

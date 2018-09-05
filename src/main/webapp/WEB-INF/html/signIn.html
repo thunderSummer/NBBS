@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>注册</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../../static/css/alertModel.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/signUp.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+	<script src="../../static/js/jquery.min.js"></script>
+</head>
+<body>
+	<script>
+	    window.onload=function(){
+	    	var i=document.getElementsByTagName('input').length;
+	    	for(var n=0;n<i-1;n++){
+	    		if(document.getElementsByTagName('input')[n].className!="sign-up-btn"){
+	    			document.getElementsByTagName('input')[n].value='';
+	    		}
+	    	}
+	    }
+	</script>
+	<!-- <header class="sign-up-header"><a href="/index/">返回</a></header> -->
+	<div class="sign-in">
+		<div class="sign-in-title">用户登录</div>
+        <form id="sign-in">
+            <div class="body-line">
+                <label for="mail">邮 箱 : </label>
+                <input id="mail" class="input1" type="text" placeholder="请输入登录邮箱" onchange="checkMail(this)"  autocomplete="close"/>
+                <!-- <i class="check fa fa-close" id="check-mail"></i> -->
+            </div>
+            <div class="body-line">
+                <label for="psw">密 码 : </label>
+                <input id="psw" class="input2" type="password" placeholder="请输入登录密码" onchange="checkPsw(this)" autocomplete="close" />
+                <!-- <i class="check fa fa-check" id="check-psw"></i> -->
+            </div>
+            <div id="verification" class="verif body-line">
+                <label for="verif">验证码 : </label>
+                <input id="verif" type="text" name="verif" placeholder="请输入验证码">
+                <span class="verif-code" id="verif-code">获取验证码</span>
+                <span class="refresh" id="refresh"><i class="fa fa-repeat"></i></span>
+                <!-- <i class="fa check"></i>
+                <span class="hint"><i class="fa fa-exclamation-circle"></i><span id="hint-invcode"></span></span> -->
+            </div>
+            <a href="signUp.html" id="sign-up">没有账号？</a>
+            <input type="submit" name="submit" value="登 录" id="login" class="btn">
+            <a href="javascript:void(0)" id="forget">忘记密码？</a>
+
+        </form>
+    </div>
+	<div class="model-alertInfo" id="model-alertInfo">
+        <div class="model-container">
+            <div class="model-head">
+                <span class="model-title">登录</span>
+                <i class="fa fa-close"></i>
+            </div>
+            <div class="model-body">
+                <h3 class="message"></h3>
+            </div>
+            <div class="model-end">
+            	<div class="btn get">确 认</div>
+                <!-- <div class="btn shut">关 闭</div> -->
+            </div>
+        </div>
+    </div>
+	<footer style="width: 100%;text-align: center;position:relative;bottom: 0;margin-top: 20rem;">
+		  <div class="">
+		  <hr>
+		    <p> Copyright @DUT论坛</p>
+		  <hr>
+		  </div>
+	</footer>
+	<script type="text/javascript" src="../../static/js/signIn.js"></script>
+	<script type="text/javascript" src="../../static/js/alertModel.js"></script>
+	<script type="text/javascript" src="../../static/js/verification.js"></script>
+</body>
+</html>
